@@ -9,9 +9,15 @@ import Slider05 from "../../assets/Slider05.png";
 import Sponsor01 from "../../assets/sponsors01.png";
 import Sponsor02 from "../../assets/sponsors02.png";
 import Sponsor03 from "../../assets/sponsors03.png";
+import AccessIcon from "../../assets/accessIcon.png";
+import CounselIcon from "../../assets/counselIcon.png";
+import JoinIcon from "../../assets/joinIcon.png";
+import StarIcon from "../../assets/starIcon.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaDigitalOcean } from "react-icons/fa";
 
 const HeroSection = () => {
   const images = [Slider01, Slider02, Slider03, Slider04, Slider05];
@@ -51,7 +57,7 @@ const HeroSection = () => {
   return (
     <div className="w-full h-fit relative ">
       {/* Absolute container */}
-      <div className="h-[110vh] absolute top-0 inset-0 z-10 flex pt-[20vh] bg-gradient-to-r from-black via-black to-black/30 px-[2%]">
+      <div className="h-[110vh] absolute top-0 inset-0 z-10 flex pt-[25vh] bg-gradient-to-r from-black via-black to-black/30 px-[2%]">
         <div className="w-fit sm:w-[70%] lg:w-[60%] md:w-[60%] text-white p-8 max-sm:text-center">
           <h1 className="font-bold mb-4 md:text-[44px] lg:text-[56px] max-md:text-[30px] w-full lg:leading-[80px] sm:leading-[60px] leading-[50px]">
             Start Your Business's Digital{" "}
@@ -64,35 +70,56 @@ const HeroSection = () => {
             skilled workers to help your business grow and succeed in today’s
             digital world.
           </p>
-          <div className="rounded-[17px] sm:w-[60%] border-[1px] border-[#BFD4FA] max-md:my-8">
-            <input
-              type="email"
-              placeholder="Enter WhatsApp Number "
-              className="px-4 bg-transparent rounded-[17px] border-none focus:ring-0 outline-none h-[43px] w-full xl:w-[60%]"
-            />
-            <button className="bg-[#BFD4FA] text-[#163F9E] rounded-[17px] h-[43px] w-full xl:w-[40%] hover:bg-[#BFD4FA]/95">
+          <div className="rounded-[17px] w-full shadow-lg border-[#BFD4FA] my-8 flex sm:justify-start justify-center">
+            <button className="bg-[#BFD4FA] text-[#163F9E] rounded-[17px] h-[55px] w-fit hover:bg-[#BFD4FA]/95 flex items-center justify-between gap-6 px-2">
+              <FaWhatsapp className="text-[28px]" />
               Connect on WhatsApp
             </button>
           </div>
         </div>
       </div>
-      <div
-        className="sponsors w-full h-[14vh] absolute bottom-0 z-10 overflow-hidden flex items-center 
-  bg-gradient-to-b from-[#FFFFFFB2] via-[#1543ACB2] to-[#000000B2]"
-      >
-        {/* Scrolling Content */}
-        <div className="flex w-[200%] animate-scroll">
-          <div className="flex">
-            <img src={Sponsor01} alt="Sponsor" className="mx-4" />
-            <img src={Sponsor02} alt="Sponsor" className="mx-4" />
-            <img src={Sponsor03} alt="Sponsor" className="mx-4" />
-          </div>
-          {/* Duplicate Content */}
-          <div className="flex">
-            <img src={Sponsor01} alt="Sponsor" className="mx-4" />
-            <img src={Sponsor02} alt="Sponsor" className="mx-4" />
-            <img src={Sponsor03} alt="Sponsor" className="mx-4" />
-          </div>
+      <div className="sponsors w-full h-[14vh] absolute bottom-0 z-10 overflow-hidden">
+        <div className="flex items-center gap-8 w-full animate-scroll-seamless">
+          {[
+            { text: "Access Digital Tools", icon: <FaDigitalOcean /> },
+            { text: "Join Digital Workshops", icon: <img src={JoinIcon} /> },
+            { text: "Discover Digital Talents", icon: <img src={StarIcon} /> },
+            {
+              text: "Book Digital Counselling",
+              icon: <img src={CounselIcon} />,
+            },
+            { text: "Access Digital Voucher", icon: <img src={AccessIcon} /> },
+            { text: "Read Digital Stories", icon: <FaDigitalOcean /> },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="flex items-center justify-center border border-gray-300 rounded-[17px] shadow-lg text-white h-[63px] gap-8 px-4 shrink-0"
+            >
+              <div className="text-2xl">{item.icon}</div>
+              <h3>{item.text}</h3>
+            </div>
+          ))}
+
+          {/* Duplicate for seamless scrolling */}
+          {[
+            { text: "Access Digital Tools", icon: <FaDigitalOcean /> },
+            { text: "Join Digital Workshops", icon: <img src={JoinIcon} /> },
+            { text: "Discover Digital Talents", icon: <img src={StarIcon} /> },
+            {
+              text: "Book Digital Counselling",
+              icon: <img src={CounselIcon} />,
+            },
+            { text: "Access Digital Voucher", icon: <img src={AccessIcon} /> },
+            { text: "Read Digital Stories", icon: <img src={StarIcon} /> },
+          ].map((item, idx) => (
+            <div
+              key={`duplicate-${idx}`}
+              className="flex items-center justify-center border border-gray-300 rounded-[17px] shadow-lg text-white h-[63px] gap-2 px-4 shrink-0"
+            >
+              <div className="text-2xl">{item.icon}</div>
+              <h3>{item.text}</h3>
+            </div>
+          ))}
         </div>
       </div>
 
