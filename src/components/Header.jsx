@@ -55,16 +55,16 @@ const Header = () => {
     <header className="bg-black text-white fixed w-full z-50 shadow-md flex flex-col justify-center ">
       <div className="container mx-auto flex justify-between items-center w-[90%] h-[11vh]">
         {/* Logo */}
-        <div className="logo">
+        <NavLink to="/" className="logo">
           <img
             src={DigitalAbaLogo}
             alt="Digital Aba Logo"
             className="w-32 lg:w-40 max-[300px]:w-20"
           />
-        </div>
+        </NavLink>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex space-x-6 ">
+        {/* <nav className="hidden lg:flex space-x-6 ">
           {links.map((link, index) => (
             <div
               key={index}
@@ -110,11 +110,12 @@ const Header = () => {
               )}
             </div>
           ))}
-        </nav>
+        </nav> */}
 
         {/* Action Buttons */}
         <div className="flex items-center lg:gap-6 gap-2">
-          <NavLink
+          <a
+            href="https://wa.link/p1cysh"
             to="/join"
             className={({ isActive }) =>
               isActive
@@ -124,17 +125,17 @@ const Header = () => {
             onClick={closeMenuAndNavigate}
           >
             Join <span className="max-[400px]:hidden">the Movement</span>
-          </NavLink>
-          <NavLink
-            to="/contact"
+          </a>
+          <a
+            href="https://wa.link/k1urvf"
             className="bg-[#BFD4FA] text-[#163F9E] rounded-lg px-4 py-2 lg:text-[15px] text-[8px]"
             onClick={closeMenuAndNavigate}
           >
             Contact Us
-          </NavLink>
-          <button className="lg:hidden" onClick={handleMenuToggle}>
+          </a>
+          {/* <button className="lg:hidden" onClick={handleMenuToggle}>
             <IoMenuSharp className="text-2xl" />
-          </button>
+          </button> */}
         </div>
       </div>
 

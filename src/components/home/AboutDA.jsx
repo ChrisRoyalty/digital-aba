@@ -15,12 +15,12 @@ const AboutDA = () => {
     <div className="bg-[url('/rectangleBg.png')] bg-cover bg-center h-fit flex flex-col items-center justify-center text-white py-16 relative">
       <div className="lg:w-[70%] w-[90%] h-[90%] mt-4">
         <div className="intro text-center">
-          <h1 className="md:text-[32px] text-[20px]">What Is Digital Aba?</h1>
+          <h1 className="md:text-[32px] text-[20px]">About Digital Aba</h1>
           <p className="md:text-[20px] text-[14px] mt-2 text-[#D1D1D6]">
-            Digital Aba is a transformative movement empowering MSMEs in Aba to
-            thrive in the global digital economy. By equipping them with tools,
-            skills, and digital platforms, we aim to ensure no business is left
-            behind in the era of innovation.
+            We work on projects that move MSMEs in Aba digitally forward.
+            Through tailored digital solutions, expert advice, and access to
+            skilled tech talent, we help businesses embrace technology to
+            improve efficiency, drive growth, and stay competitive.
           </p>
         </div>
         <div className="grid md:grid-cols-2 mt-12 gap-8">
@@ -30,13 +30,12 @@ const AboutDA = () => {
                 <img src={HackathonIcon} alt="HackathonIcon" />
               </div>
               <div className="details text-center flex flex-col gap-2">
-                <h2 className="text-[24px]">
-                  Quarterly Hackathons for Innovation
-                </h2>
+                <h2 className="text-[24px]">Digital Innovation Funds </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
-                  Dynamic events bringing innovators together to solve
-                  real-world challenges faced by MSMEs, fostering impactful and
-                  scalable solutions.
+                  Every year, we offer an innovation support fund to product
+                  designers, innovators, and software engineers, encouraging
+                  them to develop digital solutions that address real challenges
+                  faced by MSMEs in Aba.
                 </p>
                 <a
                   href="#"
@@ -58,9 +57,10 @@ const AboutDA = () => {
               <div className="details flex flex-col gap-2">
                 <h2 className="text-[24px]">Dedicated Digital Centers </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
-                  Physical hubs equipped to provide MSMEs with training,
-                  resources, and mentorship tailored to their unique business
-                  needs.
+                  Visit our Digital Center to receive in-person digital support
+                  from our experts. Get hands-on guidance, access to digital
+                  tools, and tailored solutions to help your business thrive in
+                  the digital economy.
                 </p>
                 <a
                   href="#"
@@ -82,10 +82,12 @@ const AboutDA = () => {
                 />
               </div>
               <div className="details flex flex-col gap-2">
-                <h2 className="text-[24px]">Supportive Mentorship Programs </h2>
+                <h2 className="text-[24px]">Digital Talent Deployment </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
-                  A network of experienced professionals dedicated to guiding
-                  MSMEs on their digital journey.
+                  We connect MSMEs with skilled digital talents and interns,
+                  deploying them as employees to support your digital
+                  transformation. They help optimize operations, enhance
+                  engagement, and drive long-term growth.
                 </p>
                 <a
                   href="#"
@@ -100,12 +102,12 @@ const AboutDA = () => {
                 <img src={ToolIcon} alt="ToolsIcon" />
               </div>
               <div className="details text-center flex flex-col gap-2">
-                <h2 className="text-[24px]">
-                  Tailored Digital Tools and Resources{" "}
-                </h2>
+                <h2 className="text-[24px]">Digital Tools & Vouchers </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
-                  A curated library of tools, templates, and guides to help
-                  MSMEs modernize their operations and expand their reach.
+                  We partner with top tech companies to offer a digital catalog
+                  for MSMEs in Aba. With our vouchers, businesses can access
+                  essential tools on the catalog for free or at discounted
+                  rates, helping them thrive digitally.
                 </p>
                 <a
                   href="#"
@@ -136,13 +138,13 @@ const AboutDA = () => {
         />
       </div>
       <div className="bg-[url('/gridbg.png')] bg-cover bg-center w-full h-fit flex flex-col items-center justify-center text-white py-16">
-        <a
+        {/* <a
           href="#"
           className="h-[42px] border-[1px] border-[#BFD4FA] w-[125px] rounded-[25px] shadow-lg flex justify-center items-center text-[#BFD4FA] mx-auto text-[14px]"
         >
           Learn More
           <MdArrowRight />
-        </a>
+        </a> */}
 
         <HowSection />
       </div>

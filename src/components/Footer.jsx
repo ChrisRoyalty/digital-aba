@@ -11,13 +11,15 @@ const Footer = () => {
     <div className="w-full h-fit pt-16 flex flex-col justify-center items-center">
       <div className="w-full flex justify-center items-center border-y border-[#AEAEB2BD]">
         <div className="w-[90%] py-8 flex max-md:flex-col max-md:justify-center justify-between items-center">
-          <div className="flex flex-col gap-6">
-            <img
-              src={DigitalAbaLogo}
-              alt="Digital Aba Logo"
-              className="w-[147px] max-md:mx-auto"
-            />
-            <nav className="flex gap-4">
+          <div className="flex flex-col gap-6 items-center">
+            <NavLink to="/">
+              <img
+                src={DigitalAbaLogo}
+                alt="Digital Aba Logo"
+                className="w-[147px] max-md:mx-auto"
+              />
+            </NavLink>
+            {/* <nav className="flex gap-4">
               <NavLink
                 className="text-[14px] text-[#BFD4FA] hover:border-b hover:border[#BFD4FA] hover:pb-2"
                 to="/"
@@ -42,7 +44,7 @@ const Footer = () => {
               >
                 Contact Us
               </NavLink>
-            </nav>
+            </nav> */}
           </div>
           <div className="flex flex-col gap-6 max-md:text-center max-md:mt-8">
             <h2 className="text-[16px] font-bold">Stay updated </h2>
@@ -64,13 +66,19 @@ const Footer = () => {
           © 2025 Digital Aba. All rights reserved.
         </p>
         <div className="flex gap-4">
-          <a href="#" className="">
+          <a
+            href="https://www.facebook.com/profile.php?id=61568611337006&mibextid=ZbWKwL"
+            className=""
+          >
             <FaFacebookF className="hover:text-[#BFD4FA] border-2 hover:border-[#BFD4FA] rounded-full text-[40px] p-2" />
           </a>
           <a href="#" className="">
             <FaInstagram className="hover:text-[#BFD4FA] border-2 hover:border-[#BFD4FA] rounded-full text-[40px] p-2" />
           </a>
-          <a href="#" className="">
+          <a
+            href="https://www.tiktok.com/@digital.aba.movem?_t=8rjviP3GTB9&_r=1"
+            className=""
+          >
             <FaTiktok className="hover:text-[#BFD4FA] border-2 hover:border-[#BFD4FA] rounded-full text-[40px] p-2" />
           </a>
           <a href="#" className="">
