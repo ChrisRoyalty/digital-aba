@@ -10,8 +10,8 @@ import Slider05 from "../../assets/Slider05.png";
 import AccessIcon from "../../assets/accessIcon.png";
 import CounselIcon from "../../assets/counselIcon.png";
 import JoinIcon from "../../assets/joinIcon.png";
-import StarIcon from "../../assets/starIcon.png";
-
+import ToolsIcon from "../../assets/toolsIcon.png";
+import BookIcon from "../../assets/bookIcon.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { FaWhatsapp } from "react-icons/fa";
@@ -79,59 +79,149 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-        <div className="sponsors w-full lg:h-[14vh] h-fit z-10 overflow-hidden sm:mt-[50px] md:mt-[100px]">
+        <div className="services w-full lg:h-[14vh] h-fit z-10 overflow-hidden sm:mt-[50px] md:mt-[100px]">
           <div className="flex items-center gap-8 w-full animate-scroll-seamless">
             {[
-              { text: "Access Digital Tools", icon: <FaDigitalOcean /> },
-              { text: "Join Digital Workshops", icon: <img src={JoinIcon} /> },
+              {
+                text: "Access Digital Tools",
+                icon: (
+                  <img
+                    src={ToolsIcon}
+                    className="rounded-full bg-gray-500 p-2 text-[40px]"
+                  />
+                ),
+                link: "https://wa.link/6ubp44",
+              },
+              {
+                text: "Join Digital Workshops",
+                icon: (
+                  <img
+                    className="rounded-full bg-gray-500 p-2"
+                    src={JoinIcon}
+                  />
+                ),
+                link: "https://bit.ly/BIZD",
+              },
               {
                 text: "Discover Digital Talents",
-                icon: <img src={StarIcon} />,
+                icon: (
+                  <FaDigitalOcean className="rounded-full bg-gray-500 p-2 text-[38px]" />
+                ),
+                link: "https://wa.link/4xze56",
               },
               {
                 text: "Book Digital Counselling",
-                icon: <img src={CounselIcon} />,
+                icon: (
+                  <img
+                    className="rounded-full bg-gray-500 p-2"
+                    src={CounselIcon}
+                  />
+                ),
+                link: "wa.link/0w169o",
               },
               {
                 text: "Access Digital Voucher",
-                icon: <img src={AccessIcon} />,
+                icon: (
+                  <img
+                    className="rounded-full bg-gray-500 p-2"
+                    src={AccessIcon}
+                  />
+                ),
+                link: "https://wa.link/q11lnj",
               },
-              { text: "Read Digital Stories", icon: <FaDigitalOcean /> },
+              {
+                text: "Read Digital Stories",
+                icon: (
+                  <img
+                    src={BookIcon}
+                    className="rounded-full bg-gray-500 p-2 text-[40px]"
+                  />
+                ),
+                link: "https://medium.com/@digitalabacenter",
+              },
             ].map((item, idx) => (
-              <div
+              <a
                 key={idx}
-                className="flex items-center justify-center border border-gray-300 rounded-[17px] shadow-lg text-white h-[63px] gap-8 px-4 shrink-0"
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center border border-gray-300 rounded-[17px] shadow-lg text-white h-[63px] gap-4 px-4 shrink-0 hover:bg-gray-700"
               >
                 <div className="text-2xl">{item.icon}</div>
                 <h3>{item.text}</h3>
-              </div>
+              </a>
             ))}
 
             {/* Duplicate for seamless scrolling */}
             {[
-              { text: "Access Digital Tools", icon: <FaDigitalOcean /> },
-              { text: "Join Digital Workshops", icon: <img src={JoinIcon} /> },
+              {
+                text: "Access Digital Tools",
+                icon: (
+                  <img
+                    src={ToolsIcon}
+                    className="rounded-full bg-gray-500 p-2 text-[40px]"
+                  />
+                ),
+                link: "https://wa.link/6ubp44",
+              },
+              {
+                text: "Join Digital Workshops",
+                icon: (
+                  <img
+                    className="rounded-full bg-gray-500 p-2"
+                    src={JoinIcon}
+                  />
+                ),
+                link: "https://bit.ly/BIZD",
+              },
               {
                 text: "Discover Digital Talents",
-                icon: <img src={StarIcon} />,
+                icon: (
+                  <FaDigitalOcean className="rounded-full bg-gray-500 p-2 text-[38px]" />
+                ),
+                link: "https://wa.link/4xze56",
               },
               {
                 text: "Book Digital Counselling",
-                icon: <img src={CounselIcon} />,
+                icon: (
+                  <img
+                    className="rounded-full bg-gray-500 p-2"
+                    src={CounselIcon}
+                  />
+                ),
+                link: "wa.link/0w169o",
               },
               {
                 text: "Access Digital Voucher",
-                icon: <img src={AccessIcon} />,
+                icon: (
+                  <img
+                    className="rounded-full bg-gray-500 p-2"
+                    src={AccessIcon}
+                  />
+                ),
+                link: "https://wa.link/q11lnj",
               },
-              { text: "Read Digital Stories", icon: <img src={StarIcon} /> },
+              {
+                text: "Read Digital Stories",
+                icon: (
+                  <img
+                    src={BookIcon}
+                    className="rounded-full bg-gray-500 p-2 text-[40px]"
+                  />
+                ),
+                link: "https://medium.com/@digitalabacenter",
+              },
             ].map((item, idx) => (
-              <div
+              <a
                 key={`duplicate-${idx}`}
-                className="flex items-center justify-center border border-gray-300 rounded-[17px] shadow-lg text-white h-[63px] gap-2 px-4 shrink-0"
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center border border-gray-300 rounded-[17px] shadow-lg text-white h-[63px] gap-2 px-4 shrink-0 hover:bg-gray-700"
               >
                 <div className="text-2xl">{item.icon}</div>
                 <h3>{item.text}</h3>
-              </div>
+              </a>
             ))}
           </div>
         </div>
