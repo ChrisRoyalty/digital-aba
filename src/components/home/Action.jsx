@@ -20,8 +20,8 @@ const Action = () => {
     try {
       // Send the email using EmailJS
       const result = await emailjs.send(
-        "your_service_id", // Your EmailJS service ID
-        "your_template_id", // Your EmailJS template ID
+        "service_gjjmq39", // Your EmailJS service ID
+        "template-eedsyow", // Your EmailJS template ID
         templateParams,
         "your_user_id" // Your EmailJS user ID (available in your EmailJS account)
       );

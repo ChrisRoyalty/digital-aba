@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: "class", // Enables class-based dark mode
+  darkMode: "class",
   content: [
     "./node_modules/flowbite/**/*.js",
     "./index.html",
@@ -26,5 +26,8 @@ export default {
       },
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [
+    require("flowbite/plugin"),
+    require("tailwind-scrollbar")({ nocompatible: true }), // Add scrollbar plugin
+  ],
 };

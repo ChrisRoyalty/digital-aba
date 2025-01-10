@@ -38,10 +38,10 @@ const AboutDA = () => {
                   faced by MSMEs in Aba.
                 </p>
                 <a
-                  href="#"
+                  href="https://wa.link/yzcgt7"
                   className="sm:hidden h-[31px] bg-[#BFD4FA] w-[125px] rounded-[14px] shadow-lg flex justify-center items-center text-black mx-auto mt-4 text-[14px]"
                 >
-                  View More
+                  Contact Us
                 </a>
               </div>
             </div>
@@ -63,10 +63,10 @@ const AboutDA = () => {
                   the digital economy.
                 </p>
                 <a
-                  href="#"
+                  href="https://wa.link/3xqy2h"
                   className="sm:hidden h-[31px] bg-[#BFD4FA] w-[125px] rounded-[14px] shadow-lg flex justify-center items-center text-black mx-auto mt-4 text-[14px]"
                 >
-                  View More
+                  Contact Us
                 </a>
               </div>
             </div>
@@ -90,10 +90,10 @@ const AboutDA = () => {
                   engagement, and drive long-term growth.
                 </p>
                 <a
-                  href="#"
+                  href="https://wa.link/4o1jy5"
                   className="sm:hidden h-[31px] bg-[#BFD4FA] w-[125px] rounded-[14px] shadow-lg flex justify-center items-center text-black mx-auto mt-4 text-[14px]"
                 >
-                  View More
+                  Contact Us
                 </a>
               </div>
             </div>
@@ -110,10 +110,10 @@ const AboutDA = () => {
                   rates, helping them thrive digitally.
                 </p>
                 <a
-                  href="#"
+                  href="https://wa.link/9q5477"
                   className="sm:hidden h-[31px] bg-[#BFD4FA] w-[125px] rounded-[14px] shadow-lg flex justify-center items-center text-black mx-auto mt-4 text-[14px]"
                 >
-                  View More
+                  Contact Us
                 </a>
               </div>
             </div>

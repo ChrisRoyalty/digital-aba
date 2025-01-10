@@ -8,10 +8,11 @@ const Events = () => {
     <div className="w-full h-fit flex justify-center items-center py-16 bg-black ">
       <div className="bg-[url('/UnionBg.png')] bg-cover bg-center w-[90%] h-fit flex flex-col items-center justify-center text-white py-16 rounded-xl shadow-lg p-8 relative">
         <div className="bg-[url('/Union.png')] bg-cover bg-center h-fit flex flex-col items-center justify-center text-white py-16 rounded border-y-[1px] p-8 w-full text-center gap-4">
-          <h2 className="lg:text-[32px] text-[14px] font-bold">
-            Get Exclusive MSME Opportunities <br /> Delivered to You
+          <h2 className="lg:text-[32px] text-[16px] font-bold">
+            Get Exclusive MSME Opportunities <br className="max-sm:hidden" />{" "}
+            Delivered to You
           </h2>
-          <p className="lg:text-[16px] text-[8px] text-[#D1D1D6]">
+          <p className="lg:text-[16px] text-[10px] text-[#D1D1D6]">
             Join the MSMEs Thriving in the Digital Economy
           </p>
           <a

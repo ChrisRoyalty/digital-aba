@@ -16,14 +16,22 @@ const SponsorsScroll = () => {
 
   return (
     <div
-      className="sponsors w-full overflow-hidden flex items-center 
-    bg-gradient-to-b from-[#FFFFFFB2] via-[#1543ACCC] to-[#1543ACCC]"
+      className="sponsors w-full bg-gradient-to-b from-[#FFFFFFB2] 
+      via-[#1543ACCC] to-[#1543ACCC] relative overflow-x-auto"
     >
-      <div className="flex items-center gap-8 w-full animate-scroll-seamless py-8">
+      {/* Animated scrolling section */}
+      <div
+        className="flex items-center gap-8 py-8 animate-scroll-seamless"
+        style={{
+          animation: "scroll 15s linear infinite",
+        }}
+      >
+        {/* Original sponsors */}
         {sponsors.map((sponsor, idx) => (
           <div
             key={idx}
-            className="flex items-center justify-center border border-gray-300 text-white h-[100px] px-4 shrink-0"
+            className="flex items-center justify-center border border-gray-300 
+            text-white h-[100px] px-4 shrink-0"
           >
             <img
               src={sponsor.image}
@@ -33,11 +41,12 @@ const SponsorsScroll = () => {
           </div>
         ))}
 
-        {/* Duplicate for seamless scrolling */}
+        {/* Duplicate sponsors for seamless scrolling */}
         {sponsors.map((sponsor, idx) => (
           <div
             key={`duplicate-${idx}`}
-            className="flex items-center justify-center border border-gray-300 text-white h-[100px] px-4 shrink-0"
+            className="flex items-center justify-center border border-gray-300 
+            text-white h-[100px] px-4 shrink-0"
           >
             <img
               src={sponsor.image}
@@ -47,6 +56,20 @@ const SponsorsScroll = () => {
           </div>
         ))}
       </div>
+
+      {/* Add manual scrolling styles */}
+      <style>
+        {`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };

@@ -56,11 +56,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center w-[90%] h-[11vh]">
         {/* Logo */}
         <NavLink to="/" className="logo">
-          <img
-            src={DigitalAbaLogo}
-            alt="Digital Aba Logo"
-            className="w-32 lg:w-40 max-[300px]:w-20"
-          />
+          <img src={DigitalAbaLogo} alt="Digital Aba Logo" className="w-full" />
         </NavLink>
 
         {/* Desktop Navigation */}
@@ -115,20 +111,16 @@ const Header = () => {
         {/* Action Buttons */}
         <div className="flex items-center lg:gap-6 gap-2">
           <a
-            href="https://wa.link/p1cysh"
+            href="https://wa.link/vdt3og"
             to="/join"
-            className={({ isActive }) =>
-              isActive
-                ? "text-[#BFD4FA] border-b-2 border-[#BFD4FA] pb-1 lg:text-[15px] text-[8px]"
-                : "hover:text-[#BFD4FA] lg:text-[15px] text-[8px] max-[400px]:text-[12px]"
-            }
+            className="border border-[#BFD4FA] text-[#BFD4FA] rounded-lg p-2 shadow-lg"
             onClick={closeMenuAndNavigate}
           >
             Join <span className="max-[400px]:hidden">the Movement</span>
           </a>
           <a
             href="https://wa.link/k1urvf"
-            className="bg-[#BFD4FA] text-[#163F9E] rounded-lg px-4 py-2 lg:text-[15px] text-[8px]"
+            className="bg-[#BFD4FA] text-[#163F9E] rounded-lg px-2 py-2 lg:text-[15px] text-[15px]"
             onClick={closeMenuAndNavigate}
           >
             Contact Us
