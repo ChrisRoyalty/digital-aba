@@ -56,7 +56,11 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center w-[90%] h-[11vh]">
         {/* Logo */}
         <NavLink to="/" className="logo">
-          <img src={DigitalAbaLogo} alt="Digital Aba Logo" className="w-full" />
+          <img
+            src={DigitalAbaLogo}
+            alt="Digital Aba Logo"
+            className="w-[128px] h-[20px]"
+          />
         </NavLink>
 
         {/* Desktop Navigation */}

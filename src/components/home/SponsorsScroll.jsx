@@ -30,7 +30,7 @@ const SponsorsScroll = () => {
         {sponsors.map((sponsor, idx) => (
           <div
             key={idx}
-            className="flex items-center justify-center border border-gray-300 
+            className="flex items-center justify-center  
             text-white h-[100px] px-4 shrink-0"
           >
             <img
@@ -45,7 +45,7 @@ const SponsorsScroll = () => {
         {sponsors.map((sponsor, idx) => (
           <div
             key={`duplicate-${idx}`}
-            className="flex items-center justify-center border border-gray-300 
+            className="flex items-center justify-center  
             text-white h-[100px] px-4 shrink-0"
           >
             <img

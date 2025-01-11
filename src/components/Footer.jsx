@@ -16,7 +16,7 @@ const Footer = () => {
               <img
                 src={DigitalAbaLogo}
                 alt="Digital Aba Logo"
-                className="w-full"
+                className="w-[128px] h-[20px]"
               />
             </NavLink>
             {/* <nav className="flex gap-4">
