@@ -2,7 +2,7 @@ import React from "react";
 import Sponsor01 from "../../assets/rad5hub.png"; // Replace with actual sponsor image paths
 import Sponsor02 from "../../assets/giz.png";
 import Sponsor03 from "../../assets/digitalT.png";
-import Sponsor04 from "../../assets/eu.png";
+import Sponsor04 from "../../assets/eu.jpg";
 import Sponsor05 from "../../assets/german-corporation.png";
 
 const SponsorsScroll = () => {
