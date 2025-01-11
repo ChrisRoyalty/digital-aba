@@ -86,7 +86,7 @@ const HeroSection = () => {
           <div
             className="flex gap-4 animate-scroll-seamless"
             style={{
-              animation: "scroll 10s linear infinite",
+              animation: "scroll 15s linear infinite",
             }}
           >
             {[...Array(2)].flatMap(() =>

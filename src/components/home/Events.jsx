@@ -16,7 +16,7 @@ const Events = () => {
             Join the MSMEs Thriving in the Digital Economy
           </p>
           <a
-            href="https://wa.link/p1cysh"
+            href="https://wa.link/vdt3og"
             className="h-[42px] border-[1px] border-[#BFD4FA] rounded-[25px] shadow-lg flex justify-center items-center text-[#BFD4FA] mx-auto text-[14px] mt-8 w-fit px-4 mb-8"
           >
             Join WhatsApp Channel
