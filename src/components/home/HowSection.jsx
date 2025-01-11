@@ -1,32 +1,28 @@
 import React, { useState } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import MarketImg from "../../assets/Market01.png";
 import MarketImg02 from "../../assets/Market02.png";
-import howIcon01 from "../../assets/howIcon01.png";
-import howIcon02 from "../../assets/howIcon02.png";
-import howIcon03 from "../../assets/howIcon03.png";
 
 const HowSection = () => {
-  const [activeSection, setActiveSection] = useState(
-    "Ongoing Digital Hackathons"
-  );
+  const [activeSection, setActiveSection] = useState("Digital Hackathons");
 
   const renderContent = (section) => {
     const sectionData = {
-      "Ongoing Digital Hackathons": {
-        title: "Join Ongoing Hackathons",
+      "Digital Hackathons": {
+        title: "Join Hackathons",
         description:
           "Collaborate with our community of innovators and builders to create digital solutions that solve real problems for MSMEs in Aba.",
         buttonText: "Sign Up",
         bgColor: "#BFD4FA",
-        link: "http://bit.ly/3ZaCNyQ", // Add the relevant link here
+        link: "http://bit.ly/3ZaCNyQ",
       },
-      "Ongoing Digital Workshops": {
-        title: "Ongoing Digital Skills Training",
+      "Digital Workshops": {
+        title: "Digital Skills Training",
         description:
           "Empower communities with skills to thrive in a digital world.",
         buttonText: "Explore Training",
         bgColor: "#FADB5F",
-        link: "https://bit.ly/BIZD", // Add the relevant link here
+        link: "https://bit.ly/BIZD",
       },
       "MSMEs Stories": {
         title: "Impact Stories",
@@ -34,7 +30,7 @@ const HowSection = () => {
           "Discover inspiring stories of transformation and success.",
         buttonText: "Read Stories",
         bgColor: "#A8DF65",
-        link: "https://medium.com/@digitalabacenter", // Add the relevant link here
+        link: "https://medium.com/@digitalabacenter",
       },
     };
 
@@ -44,7 +40,6 @@ const HowSection = () => {
     return (
       <div className="description01 w-full flex justify-center items-center mt-4">
         <div className="w-[90%] md:w-[70%] grid lg:grid-cols-2 h-fit max-lg:justify-center">
-          {/* Image container */}
           <div className="mt-16 flex order-none lg:order-1">
             <div className="flex flex-col justify-end items-center gap-20">
               <div
@@ -60,7 +55,8 @@ const HowSection = () => {
             <div className="main relative pb-8">
               <img
                 src={MarketImg02}
-                alt="Market Photo lg:w-[420px] w-[171px]"
+                alt="Market Photo"
+                className="lg:w-[420px] w-[171px]"
               />
               <img
                 src={MarketImg}
@@ -74,7 +70,6 @@ const HowSection = () => {
             </div>
           </div>
 
-          {/* Text content */}
           <div className="text-center w-[85%] m-auto order-none lg:order-none max-lg:mt-8">
             <h2 className="md:text-[24px] text-[20px]">{title}</h2>
             <p className="text-[#D1D1D6] md:text-[20px] text-[14px]">
@@ -99,29 +94,36 @@ const HowSection = () => {
     <div className="how mt-4 text-center w-full h-fit flex flex-col justify-center items-center">
       <h2 className="md:text-[32px] text-[20px]">How We’re Making It Happen</h2>
       <div className="grid lg:grid-cols-3 text-center mt-8 md:w-[70%] w-[90%]">
-        {[
-          "Ongoing Digital Hackathons",
-          "Ongoing Digital Workshops",
-          "MSMEs Stories",
-        ].map((section, index) => (
-          <div key={index} className="w-full">
-            <button
-              className={`hover:bg-[#BFD4FA1A] h-[80px] flex justify-center items-center border-b-2 w-full ${
-                activeSection === section
-                  ? "border-[#BFD4FA] bg-[#BFD4FA1A]"
-                  : "border-[#FFFFFF33] hover:bg-[#BFD4FA1A]"
-              }`}
-              onClick={() =>
-                setActiveSection(activeSection === section ? "" : section)
-              }
-            >
-              {section}
-            </button>
-            {activeSection === section && (
-              <div className="block lg:hidden">{renderContent(section)}</div>
-            )}
-          </div>
-        ))}
+        {["Digital Hackathons", "Digital Workshops", "MSMEs Stories"].map(
+          (section, index) => (
+            <div key={index} className="w-full">
+              <button
+                className={`hover:bg-[#BFD4FA1A] h-[80px] max-sm:border-t-2 flex justify-center items-center border-b-2 w-full ${
+                  activeSection === section
+                    ? "border-[#BFD4FA] bg-[#BFD4FA1A]"
+                    : "border-[#FFFFFF33] hover:bg-[#BFD4FA1A]"
+                }`}
+                onClick={() =>
+                  setActiveSection(activeSection === section ? "" : section)
+                }
+              >
+                {section}
+                <span className="ml-2">
+                  {activeSection === section ? (
+                    <FaChevronUp className="inline-block lg:hidden" />
+                  ) : (
+                    <FaChevronDown className="inline-block lg:hidden" />
+                  )}
+                </span>
+              </button>
+              {activeSection === section && (
+                <div className="block lg:hidden my-8">
+                  {renderContent(section)}
+                </div>
+              )}
+            </div>
+          )
+        )}
       </div>
 
       <div className="hidden lg:block w-full">
