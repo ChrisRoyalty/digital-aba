@@ -57,9 +57,9 @@ const HeroSection = () => {
   return (
     <div className="w-full h-fit relative">
       {/* Absolute overlay */}
-      <div className="h-[120vh] lg:h-[130vh] absolute top-0 inset-0 z-10 flex pt-[25vh] bg-gradient-to-r from-black via-black to-black/30 px-[2%] w-full flex-col">
+      <div className="h-[110vh] absolute top-0 inset-0 z-10 flex pt-[20vh] lg:pt-[25vh] lg:pb-[10vh] lg:h-fit bg-gradient-to-r from-black via-black to-black/30 px-[2%] w-full flex-col">
         <div className="w-fit sm:w-[70%] lg:w-[60%] text-white p-8 max-sm:text-center pt-16">
-          <h1 className="font-bold mb-4 md:text-[44px] lg:text-[56px] max-md:text-[30px] lg:leading-[80px] sm:leading-[60px] leading-[50px]">
+          <h1 className="font-bold mb-4 md:text-[44px] lg:text-[56px] max-md:text-[25px] lg:leading-[80px] sm:leading-[60px] leading-[50px]">
             Start Your Business's <br className="max-lg:hidden block" />{" "}
             <strong>Digital </strong>
             <span className="text-blue-300">{currentText}</span>
@@ -82,7 +82,7 @@ const HeroSection = () => {
         </div>
 
         {/* Services Section */}
-        <div className="services relative w-full overflow-x-auto">
+        <div className="services relative w-full overflow-x-auto lg:py-8">
           <div
             className="flex gap-4 animate-scroll-seamless"
             style={{
@@ -181,7 +181,7 @@ const HeroSection = () => {
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-[110vh] lg:h-[130vh] object-cover"
+              className="w-full h-[110vh] object-cover "
             />
           </SwiperSlide>
         ))}

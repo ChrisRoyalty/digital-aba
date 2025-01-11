@@ -7,12 +7,18 @@ import Sponsor05 from "../../assets/german-corporation.png";
 
 const SponsorsScroll = () => {
   const sponsors = [
-    { image: Sponsor01, name: "Sponsor 1" },
-    { image: Sponsor02, name: "Sponsor 2" },
-    { image: Sponsor03, name: "Sponsor 3" },
-    { image: Sponsor04, name: "Sponsor 4" },
-    { image: Sponsor05, name: "Sponsor 5" },
+    { image: Sponsor01, name: "Sponsor 1", width: "224px", height: "94px" },
+    { image: Sponsor02, name: "Sponsor 2", width: "243px", height: "136px" },
+    { image: Sponsor03, name: "Sponsor 3", width: "234px", height: "67px" },
+    { image: Sponsor04, name: "Sponsor 4", width: "224px", height: "47px" },
+    { image: Sponsor05, name: "Sponsor 5", width: "177px", height: "99px" },
   ];
+
+  // Calculate total width for the animation
+  const totalWidth = sponsors.reduce(
+    (total, sponsor) => total + parseInt(sponsor.width) + 32, // Add gap (32px)
+    0
+  );
 
   return (
     <div className="flex flex-col bg-black text-white gap-6">
@@ -31,9 +37,9 @@ const SponsorsScroll = () => {
       >
         {/* Animated scrolling section */}
         <div
-          className="flex items-center gap-8 py-8 animate-scroll-seamless"
+          className="flex items-center gap-8 py-8"
           style={{
-            animation: "scroll 15s linear infinite",
+            animation: `scroll ${totalWidth / 100}s linear infinite`, // Adjust duration based on total width
           }}
         >
           {/* Original sponsors */}
@@ -46,7 +52,11 @@ const SponsorsScroll = () => {
               <img
                 src={sponsor.image}
                 alt={sponsor.name}
-                className="w-full object-contain h-full"
+                style={{
+                  width: sponsor.width,
+                  height: sponsor.height,
+                }}
+                className="object-contain"
               />
             </div>
           ))}
@@ -61,7 +71,11 @@ const SponsorsScroll = () => {
               <img
                 src={sponsor.image}
                 alt={sponsor.name}
-                className="w-full object-contain h-full"
+                style={{
+                  width: sponsor.width,
+                  height: sponsor.height,
+                }}
+                className="object-contain"
               />
             </div>
           ))}
@@ -75,7 +89,7 @@ const SponsorsScroll = () => {
               transform: translateX(0);
             }
             100% {
-              transform: translateX(-100%);
+              transform: translateX(-${totalWidth}px);
             }
           }
         `}
