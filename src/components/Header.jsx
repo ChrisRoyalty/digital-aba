@@ -124,7 +124,7 @@ const Header = () => {
           </a>
           <a
             href="https://wa.link/k1urvf"
-            className="bg-[#BFD4FA] text-[#163F9E] rounded-lg px-2 py-2 lg:text-[15px] text-[15px]"
+            className="bg-[#BFD4FA] text-[#163F9E] rounded-lg p-2 lg:text-[15px] text-[15px] shadow-lg"
             onClick={closeMenuAndNavigate}
           >
             Contact Us

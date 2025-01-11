@@ -73,9 +73,9 @@ const HeroSection = () => {
           <div className="rounded-[17px] shadow-lg border-[#BFD4FA] my-8 flex sm:justify-start justify-center">
             <a
               href="https://wa.link/uq3khh"
-              className="bg-[#BFD4FA] text-[#163F9E] rounded-[17px] h-[55px] w-fit hover:bg-[#BFD4FA]/95 flex items-center gap-2 px-[10px]"
+              className="bg-[#BFD4FA] text-[#163F9E] rounded-[17px] h-[55px] w-fit hover:bg-[#BFD4FA]/95 flex items-center gap-1 px-[10px]"
             >
-              <FaWhatsapp className="text-[25px]" />
+              <FaWhatsapp className="text-[26px]" />
               Connect on WhatsApp
             </a>
           </div>
