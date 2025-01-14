@@ -23,8 +23,8 @@ const SponsorsScroll = () => {
   return (
     <div className="flex flex-col bg-black text-white gap-6">
       <div className="w-[90%] md:w-[70%] mx-auto text-center flex flex-col gap-2 py-4">
-        <h1 className="text-[35px]">Our Partners</h1>
-        <p className="text-[20px] text-[#D1D1D6]">
+        <h1 className="text-[32px] font-bold">Our Partners</h1>
+        <p className="lg:text-[20px] text-[16px] text-[#D1D1D6]">
           We collaborate with industry leaders, technology innovators, and
           community-focused organizations to empower MSMEs in Aba. Together, we
           drive digital transformation, providing resources, tools, and

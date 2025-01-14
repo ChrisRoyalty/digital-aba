@@ -64,7 +64,7 @@ const Header = () => {
         </NavLink>
 
         {/* Desktop Navigation */}
-        {/* <nav className="hidden lg:flex space-x-6 ">
+        <nav className="hidden lg:flex space-x-6 ">
           {links.map((link, index) => (
             <div
               key={index}
@@ -110,7 +110,7 @@ const Header = () => {
               )}
             </div>
           ))}
-        </nav> */}
+        </nav>
 
         {/* Action Buttons */}
         <div className="flex items-center lg:gap-6 gap-2">
@@ -129,9 +129,9 @@ const Header = () => {
           >
             Contact Us
           </a>
-          {/* <button className="lg:hidden" onClick={handleMenuToggle}>
+          <button className="lg:hidden" onClick={handleMenuToggle}>
             <IoMenuSharp className="text-2xl" />
-          </button> */}
+          </button>
         </div>
       </div>
 
