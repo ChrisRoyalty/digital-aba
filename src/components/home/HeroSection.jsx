@@ -4,11 +4,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import Slider01 from "../../assets/slider01.png";
-import Slider02 from "../../assets/Slider02.png";
-import Slider03 from "../../assets/Slider03.png";
-import Slider04 from "../../assets/Slider04.png";
-import Slider05 from "../../assets/Slider05.png";
+import Slider01 from "../../assets/brandImg002.jpg";
+import Slider02 from "../../assets/brandImg003.jpg";
+import Slider03 from "../../assets/brandImg06.jpg";
+import Slider04 from "../../assets/carousel01.webp";
+import Slider05 from "../../assets/brandImg08.jpg";
 
 import AccessIcon from "../../assets/accessIcon.png";
 import CounselIcon from "../../assets/counselIcon.png";
@@ -55,38 +55,38 @@ const HeroSection = () => {
   }, [charIndex, isDeleting, index, textArray]);
 
   return (
-    <div className="w-full h-fit relative">
+    <div className="relative w-full h-[109vh]">
       {/* Absolute overlay */}
-      <div className="h-[110vh] absolute top-0 inset-0 z-10 flex pt-[20vh] lg:pt-[25vh] lg:pb-[10vh] lg:h-fit bg-gradient-to-r from-black via-black to-black/30 px-[2%] w-full flex-col">
-        <div className="w-fit sm:w-[70%] lg:w-[60%] text-white p-8 max-sm:text-center pt-16">
-          <h1 className="font-bold mb-4 md:text-[44px] lg:text-[56px] max-md:text-[25px] lg:leading-[80px] sm:leading-[60px] leading-[50px]">
-            Start Your Business's <br className="max-lg:hidden block" />{" "}
+      <div className="absolute inset-0 z-10 flex flex-col justify-between bg-gradient-to-r from-black via-black/75 to-transparent text-white px-4 lg:px-8 pt-[20vh] lg:pt-[25vh] pb-[10vh]">
+        <div className="w-full mt-16 lg:w-[60%] text-center lg:text-left">
+          <h1 className="text-[28px] md:text-[44px] lg:text-[56px] font-bold leading-tight">
+            Start Your Business's <br className="hidden lg:block" />
             <strong>Digital </strong>
             <span className="text-blue-300">{currentText}</span>
           </h1>
-          <p className="mb-6 lg:text-[25px] text-[16px] lg:w-[90%] text-[#C7C7CC]">
+          <p className="mt-4 text-[16px] lg:text-[20px] lg:w-[90%] text-[#C7C7CC]">
             Digital Aba is a one-stop digital support center for non-tech
             businesses in Aba. We help connect you with the right digital tools,
             training, and skilled workers to help your business grow and succeed
             in today’s digital world.
           </p>
-          <div className="rounded-[17px] shadow-lg border-[#BFD4FA] my-8 flex sm:justify-start justify-center">
+          <div className="mt-6">
             <a
               href="https://wa.link/uq3khh"
-              className="bg-[#BFD4FA] text-[#163F9E] rounded-[17px] h-[55px] w-fit hover:bg-[#BFD4FA]/95 flex items-center gap-1 px-[10px]"
+              className="inline-flex items-center gap-2 bg-[#BFD4FA] text-[#163F9E] px-6 py-3 rounded-[17px] shadow-lg hover:bg-[#BFD4FA]/90 transition"
             >
-              <FaWhatsapp className="text-[26px]" />
+              <FaWhatsapp className="text-[24px]" />
               Connect on WhatsApp
             </a>
           </div>
         </div>
 
-        {/* Services Section */}
-        <div className="services relative w-full overflow-x-auto lg:py-8">
+        {/* Scrolling Services Section */}
+        <div className="services relative w-full overflow-x-hidden mt-8">
           <div
             className="flex gap-4 animate-scroll-seamless"
             style={{
-              animation: "scroll 15s linear infinite",
+              animation: "scroll 10s linear infinite",
             }}
           >
             {[...Array(2)].flatMap(() =>
@@ -174,20 +174,21 @@ const HeroSection = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop={true}
-        className="shadow-md"
+        className="absolute inset-0 w-full h-[109vh]"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img
-              src={image}
-              alt={`Slide ${index + 1}`}
-              className="w-full h-[110vh] object-cover "
-            />
+            <div className="w-full h-[109vh]">
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* CSS for Seamless Scroll */}
       <style>
         {`
           @keyframes scroll {

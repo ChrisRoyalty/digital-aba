@@ -14,26 +14,30 @@ import Contact from "./pages/Contact";
 import "flowbite";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import ScrollToTop from "./components/ScrollToTop"; // Correct import
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Main />}>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/msme" element={<MSME />} />
-        <Route path="/impact" element={<ImpactPage />} />
-        <Route path="/join" element={<JoinPage />} />
-        <Route path="/event" element={<EventPage />} />
-        <Route path="/hackathon" element={<HackathonsPage />} />
-        <Route path="/career" element={<Career />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-of-service" element={<TermsOfService />} />
-      </Route>
-      {/* Fallback route */}
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <>
+      <ScrollToTop /> {/* Place outside <Routes> */}
+      <Routes>
+        <Route path="/" element={<Main />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/msme" element={<MSME />} />
+          <Route path="/impact" element={<ImpactPage />} />
+          <Route path="/join" element={<JoinPage />} />
+          <Route path="/event" element={<EventPage />} />
+          <Route path="/hackathon" element={<HackathonsPage />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+        </Route>
+        {/* Fallback route */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
   );
 }
 
