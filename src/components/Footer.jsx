@@ -27,7 +27,7 @@ const Footer = ({
         <Action />
         <div className="w-full flex justify-center items-center border-y border-[#AEAEB2BD] mt-32">
           <div className="w-[90%] py-8 flex max-md:flex-col max-md:justify-center justify-between items-center ">
-            <div className="flex flex-col gap-6 items-center">
+            <div className="flex flex-col gap-6 items-center justify-center">
               <NavLink to="/">
                 <img
                   src={DigitalAbaLogo}
@@ -35,7 +35,7 @@ const Footer = ({
                   className="w-[128px] h-[20px]"
                 />
               </NavLink>
-              <nav className="flex gap-4">
+              {/* <nav className="flex gap-4">
                 <NavLink
                   className={`text-[14px] hover:border-b hover:pb-2 ${textColor}`}
                   to="/"
@@ -60,7 +60,7 @@ const Footer = ({
                 >
                   Contact Us
                 </NavLink>
-              </nav>
+              </nav> */}
             </div>
             <div className="flex flex-col gap-6 max-md:text-center max-md:mt-8">
               <h2 className={`text-[16px] font-bold ${textColor}`}>
