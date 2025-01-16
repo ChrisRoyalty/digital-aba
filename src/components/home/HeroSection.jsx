@@ -55,7 +55,7 @@ const HeroSection = () => {
   }, [charIndex, isDeleting, index, textArray]);
 
   return (
-    <div className="relative w-full h-[109vh]">
+    <div className="relative w-full h-[100vh] lg:h-[109vh]">
       {/* Absolute overlay */}
       <div className="absolute inset-0 z-10 flex flex-col justify-between bg-gradient-to-r from-black via-black/75 to-transparent text-white px-4 lg:px-8 pt-[20vh] lg:pt-[25vh] pb-[10vh]">
         <div className="w-full mt-16 lg:w-[60%] text-center lg:text-left">
@@ -174,15 +174,15 @@ const HeroSection = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop={true}
-        className="absolute inset-0 w-full h-[109vh]"
+        className="absolute inset-0 w-full h-[100vh] lg:h-[109vh] bg-black"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="mt-[11vh] w-full h-fit lg:h-[109vh] relative">
+            <div className="mt-[11vh] w-full h-[89vh] lg:h-[109vh] relative">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-[100vh] bg-black absolute top-0 left-0"
+                className="w-full h-full bg-black absolute top-0 left-0"
               />
             </div>
           </SwiperSlide>
