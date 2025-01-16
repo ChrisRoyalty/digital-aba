@@ -57,7 +57,7 @@ const HeroSection = () => {
   return (
     <div className="relative w-full h-[92vh] lg:h-[109vh]">
       {/* Absolute overlay */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-between bg-gradient-to-r from-black via-black/75 to-transparent text-white px-4 lg:px-8 pt-[17vh] lg:pt-[25vh] pb-[5vh] lg:pb-[10vh]">
+      <div className="absolute inset-0 z-10 flex flex-col justify-between bg-gradient-to-r from-black/75 via-black/30 md:from-black md:via-black/75 to-transparent text-white px-4 lg:px-8 pt-[17vh] lg:pt-[25vh] pb-[5vh] lg:pb-[10vh]">
         <div className="w-full mt-16 lg:w-[60%] text-center lg:text-left">
           <h1 className="text-[28px] md:text-[44px] lg:text-[56px] font-bold leading-tight">
             Start Your Business's{" "}
