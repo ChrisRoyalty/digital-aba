@@ -55,9 +55,9 @@ const HeroSection = () => {
   }, [charIndex, isDeleting, index, textArray]);
 
   return (
-    <div className="relative w-full h-[85vh] lg:h-[109vh]">
+    <div className="relative w-full h-[95vh] lg:h-[109vh]">
       {/* Absolute overlay */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-between bg-gradient-to-r from-black via-black/75 to-transparent text-white px-4 lg:px-8 pt-[10vh] lg:pt-[25vh] pb-[5vh] lg:pb-[10vh]">
+      <div className="absolute inset-0 z-10 flex flex-col justify-between bg-gradient-to-r from-black via-black/75 to-transparent text-white px-4 lg:px-8 pt-[14vh] lg:pt-[25vh] pb-[5vh] lg:pb-[10vh]">
         <div className="w-full mt-16 lg:w-[60%] text-center lg:text-left">
           <h1 className="text-[28px] md:text-[44px] lg:text-[56px] font-bold leading-tight">
             Start Your Business's <br className="hidden lg:block" />
@@ -174,11 +174,11 @@ const HeroSection = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop={true}
-        className="absolute inset-0 w-full h-[85vh] lg:h-[109vh] bg-black"
+        className="absolute inset-0 w-full h-[95vh] lg:h-[109vh] bg-black"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="mt-[11vh] w-full h-[83vh] lg:h-[109vh] relative">
+            <div className="mt-[11vh] w-full h-[93vh] lg:h-[109vh] relative">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
