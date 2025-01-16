@@ -65,7 +65,7 @@ const HeroSection = () => {
             <strong>Digital </strong>
             <span className="text-blue-300">{currentText}</span>
           </h1>
-          <p className="mt-4 text-[16px] lg:text-[20px] lg:w-[90%] text-[#C7C7CC]">
+          <p className="mt-4 text-[16px] lg:text-[20px] lg:w-[90%] text-gray-200 lg:text-[#C7C7CC] max-sm:bg-gradient-to-r from-black/75 via-black/30 p-2">
             Digital Aba is a one-stop digital support center for non-tech
             businesses in Aba. We help connect you with the right digital tools,
             training, and skilled workers to help your business grow and succeed
