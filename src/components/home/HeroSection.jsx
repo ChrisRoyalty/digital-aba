@@ -6,9 +6,9 @@ import "swiper/css/pagination";
 
 import Slider01 from "../../assets/brandImg002.jpg";
 import Slider02 from "../../assets/brandImg003.jpg";
-import Slider03 from "../../assets/brandImg06.jpg";
-import Slider04 from "../../assets/carousel01.webp";
-import Slider05 from "../../assets/brandImg08.jpg";
+import Slider03 from "../../assets/sme07.jpg";
+import Slider04 from "../../assets/sme02.jpg";
+import Slider05 from "../../assets/sme05.jpg";
 
 import AccessIcon from "../../assets/accessIcon.png";
 import CounselIcon from "../../assets/counselIcon.png";
@@ -55,17 +55,17 @@ const HeroSection = () => {
   }, [charIndex, isDeleting, index, textArray]);
 
   return (
-    <div className="relative w-full h-[92vh] lg:h-[109vh]">
+    <div className="relative w-full h-[90vh] lg:h-[109vh] bg-center">
       {/* Absolute overlay */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-between bg-gradient-to-r from-black/75 via-black/30 md:from-black md:via-black/75 to-transparent text-white px-4 lg:px-8 pt-[17vh] lg:pt-[25vh] pb-[5vh] lg:pb-[10vh]">
-        <div className="w-full mt-16 lg:w-[60%] text-center lg:text-left">
+      <div className="absolute inset-0 z-10 flex flex-col justify-between bg-center bg-gradient-to-r from-black/75 via-black/30 md:from-black md:via-black/75 to-transparent text-white px-4 lg:px-[5%] pt-[15vh] lg:pt-[27vh] pb-[5vh] lg:pb-[10vh]">
+        <div className="w-full max-sm:mt-24 lg:w-[60%] text-center lg:text-left">
           <h1 className="text-[28px] md:text-[44px] lg:text-[56px] font-bold leading-tight">
             Start Your Business's{" "}
             <br className="hidden lg:block max-sm:block" />
             <strong>Digital </strong>
             <span className="text-blue-300">{currentText}</span>
           </h1>
-          <p className="mt-4 text-[16px] lg:text-[20px] lg:w-[90%] text-gray-200 lg:text-[#C7C7CC] max-sm:p-4 max-sm:bg-gradient-to-b from-transparent via-black/85 to-transparent">
+          <p className="lg:mt-4 text-[16px] lg:text-[20px] lg:w-[90%] text-gray-200 lg:text-[#C7C7CC] max-sm:p-4 max-sm:bg-gradient-to-b from-transparent via-black/85 to-transparent">
             Digital Aba is a one-stop digital support center for non-tech
             businesses in Aba. We help connect you with the right digital tools,
             training, and skilled workers to help your business grow and succeed
@@ -176,15 +176,15 @@ const HeroSection = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop={true}
-        className="absolute inset-0 w-full h-[92vh] lg:h-[109vh] bg-black"
+        className="absolute inset-0 w-full h-[90vh] lg:h-[109vh] bg-black"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="mt-[11vh] w-full h-[90vh] lg:h-[109vh] relative">
+            <div className="mt-[11vh] w-full h-[100%] lg:h-[109vh] relative">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full bg-black absolute top-0 left-0"
+                className="w-full h-full bg-cover bg-black absolute top-0 left-0"
               />
             </div>
           </SwiperSlide>

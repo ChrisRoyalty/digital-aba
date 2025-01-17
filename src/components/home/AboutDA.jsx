@@ -13,7 +13,7 @@ import HowSection from "./HowSection";
 const AboutDA = () => {
   return (
     <div className="bg-[url('/rectangleBg.png')] bg-cover bg-center h-fit flex flex-col items-center justify-center text-white py-16 relative">
-      <div className="lg:w-[70%] w-[90%] h-[90%] mt-4">
+      <div className="lg:w-[60%] w-[90%] h-[90%] mt-4">
         <div className="intro text-center">
           <h1 className="md:text-[32px] text-[20px]">About Digital Aba</h1>
           <p className="md:text-[20px] text-[14px] mt-2 text-[#D1D1D6]">
@@ -30,7 +30,9 @@ const AboutDA = () => {
                 <img src={HackathonIcon} alt="HackathonIcon" />
               </div>
               <div className="details text-center flex flex-col gap-2">
-                <h2 className="text-[24px]">Digital Innovation Funds </h2>
+                <h2 className="text-[20px] font-bold">
+                  Digital Innovation Funds{" "}
+                </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
                   Every year, we offer an innovation support fund to product
                   designers, innovators, and software engineers, encouraging
@@ -55,7 +57,9 @@ const AboutDA = () => {
                 />
               </div>
               <div className="details flex flex-col gap-2">
-                <h2 className="text-[24px]">Dedicated Digital Centers </h2>
+                <h2 className="text-[20px] font-bold">
+                  Dedicated Digital Centers{" "}
+                </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
                   Visit our Digital Center to receive in-person digital support
                   from our experts. Get hands-on guidance, access to digital
@@ -82,7 +86,9 @@ const AboutDA = () => {
                 />
               </div>
               <div className="details flex flex-col gap-2">
-                <h2 className="text-[24px]">Digital Talent Deployment </h2>
+                <h2 className="text-[20px] font-bold">
+                  Digital Talent Deployment{" "}
+                </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
                   We connect MSMEs with skilled digital talents and interns,
                   deploying them as employees to support your digital
@@ -102,7 +108,9 @@ const AboutDA = () => {
                 <img src={ToolIcon} alt="ToolsIcon" />
               </div>
               <div className="details text-center flex flex-col gap-2">
-                <h2 className="text-[24px]">Digital Tools & Vouchers </h2>
+                <h2 className="text-[20px] font-bold">
+                  Digital Tools & Vouchers{" "}
+                </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
                   We partner with top tech companies to offer a digital catalog
                   for MSMEs in Aba. With our vouchers, businesses can access

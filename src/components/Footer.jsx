@@ -32,9 +32,27 @@ const Footer = ({
                 <img
                   src={DigitalAbaLogo}
                   alt="Digital Aba Logo"
-                  className="w-[128px] h-[20px]"
+                  className="-[150px] h-[25px]"
                 />
               </NavLink>
+              <div className="flex justify-center items-center lg:gap-6 gap-2">
+                <a
+                  href="https://wa.link/vdt3og"
+                  to="/join"
+                  className="hover:text-[#BFD4FA] p-2"
+                >
+                  Join <span className="">the Movement</span>
+                </a>
+                <a
+                  href="https://wa.link/k1urvf"
+                  className="hover:text-[#BFD4FA] p-2 lg:text-[15px] text-[15px] shadow-lg"
+                >
+                  Contact Us
+                </a>
+                {/* <button className="lg:hidden" onClick={handleMenuToggle}>
+            <IoMenuSharp className="text-2xl" />
+          </button> */}
+              </div>
               {/* <nav className="flex gap-4">
                 <NavLink
                   className={`text-[14px] hover:border-b hover:pb-2 ${textColor}`}

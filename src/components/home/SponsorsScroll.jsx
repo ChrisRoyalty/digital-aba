@@ -1,17 +1,18 @@
 import React from "react";
-import Sponsor01 from "../../assets/rad5hub.png"; // Replace with actual sponsor image paths
+import Sponsor05 from "../../assets/german-corporation.png";
+import Sponsor04 from "../../assets/eu.png";
 import Sponsor02 from "../../assets/giz.png";
 import Sponsor03 from "../../assets/digitalT.png";
-import Sponsor04 from "../../assets/eu.jpg";
-import Sponsor05 from "../../assets/german-corporation.png";
+import Sponsor01 from "../../assets/rad5hub.png"; // Replace with actual sponsor image paths
+import SponsorsMain from "../../assets/sponsors.jpg";
 
 const SponsorsScroll = () => {
   const sponsors = [
-    { image: Sponsor01, name: "Sponsor 1", width: "224px", height: "94px" },
-    { image: Sponsor02, name: "Sponsor 2", width: "243px", height: "136px" },
-    { image: Sponsor03, name: "Sponsor 3", width: "234px", height: "67px" },
-    { image: Sponsor04, name: "Sponsor 4", width: "224px", height: "47px" },
-    { image: Sponsor05, name: "Sponsor 5", width: "177px", height: "99px" },
+    { image: Sponsor01, name: "Sponsor 1", width: "100%", height: "94px" },
+    { image: Sponsor02, name: "Sponsor 2", width: "100%", height: "126px" },
+    { image: Sponsor03, name: "Sponsor 3", width: "100%", height: "67px" },
+    { image: Sponsor04, name: "Sponsor 4", width: "100%", height: "124px" },
+    { image: Sponsor05, name: "Sponsor 5", width: "100%", height: "99px" },
   ];
 
   // Calculate total width for the animation
@@ -32,8 +33,8 @@ const SponsorsScroll = () => {
         </p>
       </div>
       <div
-        className="sponsors w-full bg-gradient-to-b from-[#FFFFFFB2] 
-      via-[#1543ACCC] to-[#1543ACCC] relative overflow-x-auto"
+        className="sponsors w-full bg-gradient-to-b from-[#1543ACCC] 
+      via-gray-300 to-[#ffff] relative overflow-x-hidden"
       >
         {/* Animated scrolling section */}
         <div

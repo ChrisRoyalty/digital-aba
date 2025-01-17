@@ -59,7 +59,7 @@ const Header = () => {
           <img
             src={DigitalAbaLogo}
             alt="Digital Aba Logo"
-            className="w-[128px] h-[20px]"
+            className="w-[150px] h-[25px]"
           />
         </NavLink>
 
@@ -120,11 +120,11 @@ const Header = () => {
             className="border border-[#BFD4FA] text-[#BFD4FA] rounded-lg p-2 shadow-lg"
             onClick={closeMenuAndNavigate}
           >
-            Join <span className="max-[400px]:hidden">the Movement</span>
+            Join <span className="">the Movement</span>
           </a>
           <a
             href="https://wa.link/k1urvf"
-            className="bg-[#BFD4FA] text-[#163F9E] rounded-lg p-2 lg:text-[15px] text-[15px] shadow-lg"
+            className="bg-[#BFD4FA] text-[#163F9E] rounded-lg p-2 lg:text-[15px] text-[15px] shadow-lg max-sm:hidden"
             onClick={closeMenuAndNavigate}
           >
             Contact Us
