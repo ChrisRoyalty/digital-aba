@@ -57,7 +57,7 @@ const HeroSection = () => {
   }, [charIndex, isDeleting, index, textArray]);
 
   return (
-    <div className="relative w-full h-[95vh] md:h-[100vh] bg-center bg-black">
+    <div className="relative w-full h-[93vh] md:h-[100vh] bg-center bg-black">
       {/* Absolute overlay */}
       <div className="absolute inset-0 z-10 flex flex-col justify-between bg-center bg-gradient-to-r from-black/75 via-black/30 md:from-black md:via-black/75 to-transparent text-white px-4 lg:px-[5%] pt-[15vh] lg:pt-[28vh]">
         <div className="w-full max-sm:mt-24 lg:w-[60%] text-center lg:text-left">
@@ -86,7 +86,7 @@ const HeroSection = () => {
         </div>
 
         {/* Scrolling Services Section */}
-        <div className="services relative w-full overflow-x-hidden lg:mt-8 mb-4">
+        <div className="services relative w-full overflow-x-hidden lg:mt-8 mb-4 max-sm:mb-[5vh]">
           <div
             className="flex gap-4 animate-scroll-seamless"
             style={{
@@ -196,7 +196,7 @@ const HeroSection = () => {
       </div>
 
       {/* Static image for mobile */}
-      <div className="md:hidden block pt-[11vh] h-[95vh]">
+      <div className="md:hidden block pt-[11vh] h-[93vh] ">
         <img
           src={MobileImage} // Use your separate mobile image here
           alt="Mobile View"
