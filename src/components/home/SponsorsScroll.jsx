@@ -33,7 +33,7 @@ const SponsorsScroll = () => {
         </p>
       </div>
       <div
-        className="sponsors w-full bg-gradient-to-b from-[#1543ACCC] 
+        className="sponsors w-full bg-gradient-to-b from-[#1542ac54] 
       via-gray-300 to-[#ffff] relative overflow-x-hidden"
       >
         {/* Animated scrolling section */}

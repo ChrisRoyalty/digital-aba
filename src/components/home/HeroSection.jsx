@@ -4,11 +4,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import Slider01 from "../../assets/brandImg002.jpg";
+import Slider01 from "../../assets/sme16.jpg";
 import Slider02 from "../../assets/brandImg003.jpg";
 import Slider03 from "../../assets/sme07.jpg";
-import Slider04 from "../../assets/sme02.jpg";
+import Slider04 from "../../assets/sme15.jpg";
 import Slider05 from "../../assets/sme05.jpg";
+
+import MobileImage from "../../assets/sme02.jpg"; // Add your mobile image here
 
 import AccessIcon from "../../assets/accessIcon.png";
 import CounselIcon from "../../assets/counselIcon.png";
@@ -55,9 +57,9 @@ const HeroSection = () => {
   }, [charIndex, isDeleting, index, textArray]);
 
   return (
-    <div className="relative w-full h-[90vh] lg:h-[109vh] bg-center">
+    <div className="relative w-full h-[100vh] md:h-[100vh] bg-center bg-black">
       {/* Absolute overlay */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-between bg-center bg-gradient-to-r from-black/75 via-black/30 md:from-black md:via-black/75 to-transparent text-white px-4 lg:px-[5%] pt-[15vh] lg:pt-[27vh] pb-[5vh] lg:pb-[10vh]">
+      <div className="absolute inset-0 z-10 flex flex-col justify-between bg-center bg-gradient-to-r from-black/75 via-black/30 md:from-black md:via-black/75 to-transparent text-white px-4 lg:px-[5%] pt-[15vh] lg:pt-[28vh]">
         <div className="w-full max-sm:mt-24 lg:w-[60%] text-center lg:text-left">
           <h1 className="text-[28px] md:text-[44px] lg:text-[56px] font-bold leading-tight">
             Start Your Business's{" "}
@@ -84,7 +86,7 @@ const HeroSection = () => {
         </div>
 
         {/* Scrolling Services Section */}
-        <div className="services relative w-full overflow-x-hidden lg:mt-8">
+        <div className="services relative w-full overflow-x-hidden lg:mt-8 mb-4">
           <div
             className="flex gap-4 animate-scroll-seamless"
             style={{
@@ -168,28 +170,39 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Swiper Carousel */}
-      <Swiper
-        modules={[Pagination, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
-        loop={true}
-        className="absolute inset-0 w-full h-[90vh] lg:h-[109vh] bg-black"
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div className="mt-[11vh] w-full h-[100%] lg:h-[109vh] relative">
-              <img
-                src={image}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full bg-cover bg-black absolute top-0 left-0"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      {/* Swiper Carousel for larger screens */}
+      <div className="md:block hidden">
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000 }}
+          loop={true}
+          className="absolute inset-0 w-full h-[100vh] lg:h-[100vh] bg-black"
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="mt-[11vh] w-full h-[100%] lg:h-[100vh] relative">
+                <img
+                  src={image}
+                  alt={`Slide ${index + 1}`}
+                  className="w-full h-full bg-cover bg-black absolute top-0 left-0 lg:object-cover overflow-hidden object-center"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      {/* Static image for mobile */}
+      <div className="md:hidden block pt-[11vh]">
+        <img
+          src={MobileImage} // Use your separate mobile image here
+          alt="Mobile View"
+          className="w-full h-[100vh] object-cover"
+        />
+      </div>
 
       <style>
         {`
