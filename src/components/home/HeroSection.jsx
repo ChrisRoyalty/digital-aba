@@ -196,11 +196,11 @@ const HeroSection = () => {
       </div>
 
       {/* Static image for mobile */}
-      <div className="md:hidden block pt-[11vh]">
+      <div className="md:hidden block pt-[11vh] h-[100vh]">
         <img
           src={MobileImage} // Use your separate mobile image here
           alt="Mobile View"
-          className="w-full h-[100vh] object-cover"
+          className="w-full h-full  object-center"
         />
       </div>
 
