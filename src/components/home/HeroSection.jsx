@@ -67,7 +67,7 @@ const HeroSection = () => {
             <strong>Digital </strong>
             <span className="text-blue-300">{currentText}</span>
           </h1>
-          <p className="lg:mt-4 text-[16px] lg:text-[20px] lg:w-[90%] text-gray-200 lg:text-[#C7C7CC] max-sm:p-4 max-sm:bg-gradient-to-b from-transparent via-black/85 to-transparent">
+          <p className="lg:mt-4 text-[16px] lg:text-[20px] lg:w-[90%] text-gray-300 lg:text-[#C7C7CC]   ">
             Digital Aba is a one-stop digital support center for non-tech
             businesses in Aba. We help connect you with the right digital tools,
             training, and skilled workers to help your business grow and succeed
@@ -86,7 +86,7 @@ const HeroSection = () => {
         </div>
 
         {/* Scrolling Services Section */}
-        <div className="services relative w-full overflow-x-hidden lg:mt-8 mb-4 max-sm:mb-[5vh]">
+        <div className="services relative w-full overflow-x-hidden max-sm:overflow-auto lg:mt-8 mb-4 max-sm:mb-[5vh]">
           <div
             className="flex gap-4 animate-scroll-seamless"
             style={{

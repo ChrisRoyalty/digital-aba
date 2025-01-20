@@ -120,7 +120,7 @@ const Header = () => {
             className="border border-[#BFD4FA] text-[#BFD4FA] rounded-lg p-2 shadow-lg"
             onClick={closeMenuAndNavigate}
           >
-            Join <span className="">the Movement</span>
+            Join <span className="max-[370px]:hidden">the Movement</span>
           </a>
           <a
             href="https://wa.link/k1urvf"
