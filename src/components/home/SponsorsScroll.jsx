@@ -39,7 +39,7 @@ const SponsorsScroll = () => {
           opportunities that enable sustainable growth and success.
         </p>
       </div>
-      <div className="sponsors w-full bg-gradient-to-b from-[#1542ac54] via-gray-300 to-[#ffff] relative overflow-x-hidden">
+      <div className="sponsors w-full bg-gradient-to-b from-[#1542ac54] via-gray-300 to-[#ffff] relative overflow-x-hidden max-sm:overflow-auto">
         {/* Scrolling container */}
         <div
           className={`flex items-center gap-8 py-8 ${
