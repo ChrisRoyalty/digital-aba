@@ -90,10 +90,10 @@ const HeroSection = () => {
           <div
             className="flex gap-4 animate-scroll-seamless"
             style={{
-              animation: "scroll 10s linear infinite",
+              animation: "scroll 8s linear infinite",
             }}
           >
-            {[...Array(2)].flatMap(() =>
+            {[...Array(2)].flatMap((_, outerIdx) =>
               [
                 {
                   text: "Access Digital Tools",
@@ -154,7 +154,7 @@ const HeroSection = () => {
                 },
               ].map((item, idx) => (
                 <a
-                  key={`item-${idx}`}
+                  key={`item-${outerIdx}-${idx}`} // Make keys unique by including outerIdx
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"

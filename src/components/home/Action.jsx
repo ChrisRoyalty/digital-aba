@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Footer from "../Footer";
 import emailjs from "emailjs-com";
 
 const Action = () => {
@@ -7,33 +6,44 @@ const Action = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const handleJoinNow = async () => {
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
     if (!email) {
       alert("Please enter a valid email address.");
       return;
     }
 
-    // EmailJS configuration
+    console.log(
+      "Service ID:",
+      serviceId,
+      "Template ID:",
+      templateId,
+      "Public Key:",
+      publicKey
+    );
+
     const templateParams = {
-      email: email, // The email input value
+      email: email,
     };
 
     try {
-      // Send the email using EmailJS
       const result = await emailjs.send(
-        "service_gjjmq39", // Your EmailJS service ID
-        "template-eedsyow", // Your EmailJS template ID
+        serviceId,
+        templateId,
         templateParams,
-        "your_user_id" // Your EmailJS user ID (available in your EmailJS account)
+        publicKey
       );
 
       console.log("Email sent:", result.text);
-
-      // Show modal to user
       setModalVisible(true);
-      setEmail(""); // Clear input
+      setEmail(""); // Clear input field
     } catch (error) {
       console.error("Error sending email:", error);
-      alert("An error occurred. Please try again.");
+      alert(
+        "An error occurred while sending the email. Please try again later."
+      );
     }
   };
 
@@ -45,15 +55,14 @@ const Action = () => {
         </h2>
         <p className="w-[90%] sm:w-[80%] lg:w-[65%] m-auto lg:text-[24px] text-[17px] text-[#D1D1D6]">
           Join the Digital Aba Movement and help shape the digital future of
-          MSMEs in Aba. Whether you're an MSME, tech company, innovator,
-          sponsor, or partner, your contribution is vital.
+          MSMEs in Aba.
         </p>
         <div className="rounded-[17px] sm:w-[60%] border-[1px] border-[#BFD4FA] mx-auto flex">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter Email "
+            placeholder="Enter Email"
             className="px-4 bg-transparent rounded-[17px] border-none focus:ring-0 outline-none h-[43px] w-[60%]"
           />
           <button
@@ -65,25 +74,24 @@ const Action = () => {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Success Modal */}
       {modalVisible && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-          <div className="bg-white p-8 rounded-md shadow-lg text-center">
+          <div className="bg-gray-300 text-black p-8 rounded-md shadow-lg text-center">
             <h3 className="text-lg font-bold mb-4">Success!</h3>
             <p>
               Thank you for joining! You’ll receive an email shortly with
-              further information. Stay connected!
+              further information.
             </p>
             <button
               onClick={() => setModalVisible(false)}
-              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md"
+              className="mt-4 text-[#BFD4FA] bg-black shadow-lg px-4 py-2 rounded-md"
             >
               Close
             </button>
           </div>
         </div>
       )}
-      {/* <Footer bgColor=""/> */}
     </div>
   );
 };
