@@ -120,14 +120,14 @@ const Header = () => {
             className="border border-[#BFD4FA] text-[#BFD4FA] rounded-lg p-2 shadow-lg"
             onClick={closeMenuAndNavigate}
           >
-            Join <span className="max-[370px]:hidden">the Program</span>
+            Fund <span className="max-[370px]:hidden">a Grant</span>
           </a>
           <a
             href="https://wa.link/k1urvf"
             className="bg-[#BFD4FA] text-[#163F9E] rounded-lg p-2 lg:text-[15px] text-[15px] shadow-lg max-sm:hidden"
             onClick={closeMenuAndNavigate}
           >
-            Support the Project
+            Access Grant
           </a>
           {/* <button className="lg:hidden" onClick={handleMenuToggle}>
             <IoMenuSharp className="text-2xl" />

@@ -12,16 +12,16 @@ import HowSection from "./HowSection";
 
 const AboutDA = () => {
   return (
-    <div className="bg-[url('/rectangleBg.png')] bg-cover bg-center h-fit flex flex-col items-center justify-center text-white relative">
+    <div className="bg-[url('/rectangleBg.png')] bg-cover bg-center h-fit flex flex-col items-center justify-center text-white relative pt-12 lg:pt-16">
       <div className="lg:w-[60%] w-[90%] h-[90%] mt-4">
         <div className="intro text-center">
           <h1 className="md:text-[32px] text-[20px]">About Digital Aba</h1>
           <p className="md:text-[20px] text-[14px] mt-2 text-[#D1D1D6]">
-            We accelerate the digital growth of Aba MSMEs through our support
-            centers and unique professional pairing program. Each business is
-            matched with a dedicated digital expert who provides hands-on
+            We accelerate the digital growth of Aba Fashion MSMEs through our
+            digital grants and credit program. Businesses can use their credits
+            to access dedicated digital tools and experts, receiving hands-on
             support to transform operations, drive growth, and expand market
-            reach in the digital age.
+            reach.
           </p>
         </div>
         <div className="grid md:grid-cols-2 mt-12 gap-8">

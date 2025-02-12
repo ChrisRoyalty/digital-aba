@@ -17,9 +17,9 @@ const HowSection = () => {
         link: "http://bit.ly/3ZaCNyQ",
       },
       "Digital Skill Training": {
-        title: "Partner in Digital Skill ",
+        title: "Partner in Digital Skill Training",
         description:
-          "Training Join forces with Digital Aba to empower fashion entrepreneurs with tailored digital skills training, helping them enhance their businesses and succeed in the digital economy.",
+          "Join forces with Digital Aba to empower fashion entrepreneurs with tailored digital skills training, helping them enhance their businesses and succeed in the digital economy.",
         buttonText: "Partner Now",
         bgColor: "#FADB5F",
         link: "https://bit.ly/BIZD",

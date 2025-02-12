@@ -19,10 +19,11 @@ import ToolsIcon from "../../assets/toolsIcon.png";
 import BookIcon from "../../assets/bookIcon.png";
 import { Pagination, Autoplay } from "swiper/modules";
 import { FaWhatsapp } from "react-icons/fa";
+import { MdCancelPresentation } from "react-icons/md";
 
 const HeroSection = () => {
   const images = [Slider01, Slider02, Slider03, Slider04, Slider05];
-  const textArray = ["Grow Smarter", "Scale Faster", "Reach Wider"];
+  const textArray = ["MSMEs", "Entrepreneurs", "Brands"];
   const [currentText, setCurrentText] = useState("");
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -122,12 +123,13 @@ const HeroSection = () => {
   return (
     <div className="relative w-full h-[100vh] bg-center bg-black">
       {/* Absolute overlay */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-between bg-center bg-gradient-to-r from-black/75 via-black/30 md:from-black md:via-black/75 to-transparent text-white px-4 lg:px-[5%] pt-[15vh] lg:pt-[28vh]">
+      <div className="absolute inset-0 z-10 flex flex-col justify-between bg-center bg-gradient-to-r from-black/75 via-black/30 md:from-black md:via-black/75 to-transparent text-white px-4 lg:px-[5%] sm:pt-[15vh] pt-[12vh] lg:pt-[28vh] max-sm:bg-black/50">
         <div className="w-full max-sm:mt-24 lg:w-[60%] text-center lg:text-left">
           <h1 className="text-[28px] lg:text-[40px] font-bold leading-tight">
-            Digital Support for Fashion MSMEs
+            Digital Grants for Aba
             <br className="hidden lg:block max-sm:block" />
-            <span className="text-blue-300">
+            Fashion
+            <span className="text-blue-300 pl-2">
               <span
                 style={{
                   whiteSpace: "nowrap",
@@ -140,11 +142,8 @@ const HeroSection = () => {
             </span>
           </h1>
           <p className="lg:mt-4 text-[16px] lg:text-[18px] lg:w-[90%] text-gray-300 lg:text-[#C7C7CC]">
-            Digital Aba empowers fashion entrepreneurs in Aba with expert
-            digital support to transform their operations and accelerate growth
-            in the digital age. Each MSME is assigned a dedicated digital expert
-            who supports their business journey to grow smarter, scale faster,
-            and reach wider markets.
+            Receive technology credits to access expert digital support and
+            powerful tools to help grow your fashion business.
           </p>
 
           <div className="mt-6">
@@ -153,36 +152,38 @@ const HeroSection = () => {
               className="inline-flex items-center gap-2 bg-[#BFD4FA] text-[#163F9E] px-6 py-3 rounded-[17px] shadow-lg hover:bg-[#BFD4FA]/90 transition"
             >
               <FaWhatsapp className="text-[24px]" />
-              Connect on whatsapp
+              Get Started Today
             </a>
           </div>
         </div>
 
         {/* Scrolling Services Section */}
-        <div className="services relative w-full overflow-x-hidden mb-14 flex flex-col gap-4 max-sm:mb-[2vh] max-sm:gap-2">
-          <h2 className="lg:text-[25px] text-[22px] text-white">
+        <div>
+          <h2 className="lg:text-start lg:text-[25px] text-[20px] text-center text-white w-full">
             Digital Supports for Fashion MSMEs
           </h2>
-          <div
-            className="flex gap-4 animate-scroll-seamless"
-            style={{
-              animation: "scroll 8s linear infinite",
-            }}
-          >
-            {[...Array(2)].flatMap((_, outerIdx) =>
-              services.map((item, idx) => (
-                <a
-                  key={`item-${outerIdx}-${idx}`} // Make keys unique by including outerIdx
-                  href="#!"
-                  onClick={() => handleServiceClick(item)}
-                  className="flex items-center justify-center border border-gray-300 rounded-[17px] shadow-lg text-white h-[63px] gap-2 px-4 shrink-0 hover:bg-gray-700"
-                  style={{ minWidth: "150px" }}
-                >
-                  <div className="text-2xl">{item.icon}</div>
-                  <h3>{item.title}</h3>
-                </a>
-              ))
-            )}
+          <div className="services relative w-full md:overflow-x-hidden overflow-auto  mb-14 flex flex-col gap-4 max-sm:mb-[5vh] max-sm:gap-2 mt-2">
+            <div
+              className="flex gap-4 animate-scroll-seamless"
+              style={{
+                animation: "scroll 8s linear infinite",
+              }}
+            >
+              {[...Array(2)].flatMap((_, outerIdx) =>
+                services.map((item, idx) => (
+                  <a
+                    key={`item-${outerIdx}-${idx}`} // Make keys unique by including outerIdx
+                    href="#!"
+                    onClick={() => handleServiceClick(item)}
+                    className="flex items-center justify-center border border-gray-300 rounded-[17px] shadow-lg text-white h-[63px] gap-2 px-4 shrink-0 hover:bg-gray-700"
+                    style={{ minWidth: "150px" }}
+                  >
+                    <div className="text-2xl">{item.icon}</div>
+                    <h3>{item.title}</h3>
+                  </a>
+                ))
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -213,7 +214,7 @@ const HeroSection = () => {
       </div>
 
       {/* Static image for mobile */}
-      <div className="md:hidden block pt-[11vh] h-[100vh] ">
+      <div className="md:hidden block pt-[11vh] h-[100vh]">
         <img
           src={MobileImage} // Use your separate mobile image here
           alt="Mobile View"
@@ -226,7 +227,7 @@ const HeroSection = () => {
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-20">
           <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
             <h2 className="text-2xl font-bold mb-4">{modalData.title}</h2>
-            <ul className="mb-4">
+            <ul className="mb-4 list-disc pl-5">
               {modalData.title === "Digital Skills Academy" && (
                 <>
                   <li className="text-lg mb-2">
@@ -304,7 +305,7 @@ const HeroSection = () => {
                   href={modalData.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                  className="bg-[#BFD4FA] text-gray-700 w-full text-center shadow-lg py-3 rounded-lg"
                 >
                   Start Learning Today
                 </a>
@@ -315,7 +316,7 @@ const HeroSection = () => {
                   href={modalData.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                  className="bg-[#BFD4FA] text-gray-700 w-full text-center shadow-lg py-3 rounded-lg"
                 >
                   Get Digital Tools
                 </a>
@@ -326,7 +327,7 @@ const HeroSection = () => {
                   href={modalData.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                  className="bg-[#BFD4FA] text-gray-700 w-full text-center shadow-lg py-3 rounded-lg"
                 >
                   Boost Your Marketing
                 </a>
@@ -337,7 +338,7 @@ const HeroSection = () => {
                   href={modalData.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                  className="bg-[#BFD4FA] text-gray-700 w-full text-center shadow-lg py-3 rounded-lg"
                 >
                   Start Selling Online
                 </a>
@@ -348,7 +349,7 @@ const HeroSection = () => {
                   href={modalData.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                  className="bg-[#BFD4FA] text-gray-700 w-full text-center shadow-lg py-3 rounded-lg"
                 >
                   Connect with an Expert
                 </a>
@@ -359,7 +360,7 @@ const HeroSection = () => {
                   href={modalData.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                  className="bg-[#BFD4FA] text-gray-700 w-full text-center shadow-lg py-3 rounded-lg"
                 >
                   Access Innovation Support
                 </a>
@@ -370,19 +371,17 @@ const HeroSection = () => {
                   href={modalData.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                  className="text-center bg-[#BFD4FA] text-gray-700 w-full py-3 rounded-lg"
                 >
                   Find Digital Talent
                 </a>
               )}
             </div>
             <div className="absolute top-2 right-2">
-              <button
+              <MdCancelPresentation
+                className="text-[#2e6ad8] text-[30px] cursor-pointer hover:text-[31px]"
                 onClick={closeModal}
-                className="bg-gray-300 text-black px-4 py-2 rounded-lg"
-              >
-                Cancel
-              </button>
+              />
             </div>
           </div>
         </div>
@@ -395,7 +394,7 @@ const HeroSection = () => {
               transform: translateX(0);
             }
             100% {
-              transform: translateX(-100%);
+              transform: translateX(-150%);
             }
           }
         `}

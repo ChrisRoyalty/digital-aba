@@ -10,7 +10,7 @@ const Impact = () => {
       <h1 className="w-[90%] mx-auto md:text-[32px] text-[25px] text-center font-bold">
         Support Us in Making an Impact
       </h1>
-      <div className="w-[90%] flex flex-wrap gap-4 items-center justify-center">
+      <div className="w-[90%] mt-4 flex flex-wrap gap-4 items-center justify-center">
         <div className="flex gap-2 max-lg:border-l-[1px] border-[#FFFFFF66] lg:px-10 px-4 md:pb-2 pb-1">
           <img
             src={HowIcon01}
