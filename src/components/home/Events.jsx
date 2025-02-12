@@ -9,17 +9,18 @@ const Events = () => {
       <div className="bg-[url('/UnionBg.png')] bg-cover bg-center w-[90%] h-fit flex flex-col items-center justify-center text-white py-16 rounded-xl shadow-lg p-8 relative">
         <div className="bg-[url('/Union.png')] bg-cover bg-center h-fit flex flex-col items-center justify-center text-white py-16 rounded border-y-[1px] p-8 w-full text-center gap-4">
           <h2 className="lg:text-[32px] text-[16px] font-bold">
-            Get Exclusive MSME Opportunities <br className="max-sm:hidden" />{" "}
-            Delivered to You
+            Implementing Organization
           </h2>
           <p className="lg:text-[16px] text-[10px] text-[#D1D1D6]">
-            Join the MSMEs Thriving in the Digital Economy
+            RAD5 Tech Hub is the implementing organization for Digital Aba, with
+            extensive experience in digital transformation, <br /> software
+            development services, and tech startup support.
           </p>
           <a
-            href="https://wa.link/vdt3og"
+            href="https://rad5.com.ng/"
             className="h-[42px] border-[1px] border-[#BFD4FA] rounded-[25px] shadow-lg flex justify-center items-center text-[#BFD4FA] mx-auto text-[14px] mt-8 w-fit px-4 mb-8"
           >
-            Join WhatsApp Channel
+            Learn more about RAD5
             <MdArrowRight className="text-[28px]" />
           </a>
         </div>

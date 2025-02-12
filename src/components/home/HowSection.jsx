@@ -9,26 +9,26 @@ const HowSection = () => {
   const renderContent = (section) => {
     const sectionData = {
       "Digital Hackathons": {
-        title: "Join Hackathons",
+        title: "Sponsor Hackathons",
         description:
-          "Collaborate with our community of innovators and builders to create digital solutions that solve real problems for MSMEs in Aba.",
-        buttonText: "Sign Up",
+          "Invest in the Digital Aba Innovation Fund to help develop new digital products and solutions for fashion entrepreneurs.",
+        buttonText: "Sponsor Now",
         bgColor: "#BFD4FA",
         link: "http://bit.ly/3ZaCNyQ",
       },
-      "Digital Workshops": {
-        title: "Digital Skills Training",
+      "Digital Skill Training": {
+        title: "Partner in Digital Skill ",
         description:
-          "Empower communities with skills to thrive in a digital world.",
-        buttonText: "Explore Training",
+          "Training Join forces with Digital Aba to empower fashion entrepreneurs with tailored digital skills training, helping them enhance their businesses and succeed in the digital economy.",
+        buttonText: "Partner Now",
         bgColor: "#FADB5F",
         link: "https://bit.ly/BIZD",
       },
-      "MSMEs Stories": {
-        title: "Impact Stories",
+      "Digital Vouchers": {
+        title: "Sponsor Digital Vouchers",
         description:
-          "Discover inspiring stories of transformation and success.",
-        buttonText: "Read Stories",
+          "Support MSMEs by funding Digital Aba’s technology vouchers, enabling fashion entrepreneurs to access digital tools, products, and services at little to no cost. Help empower the fashion industry to thrive in the digital age.",
+        buttonText: "Sponsor Now",
         bgColor: "#A8DF65",
         link: "https://medium.com/@digitalabacenter",
       },
@@ -92,38 +92,40 @@ const HowSection = () => {
 
   return (
     <div className="how mt-4 text-center w-full h-fit flex flex-col justify-center items-center">
-      <h2 className="md:text-[32px] text-[20px]">How We’re Making It Happen</h2>
+      <h2 className="md:text-[32px] text-[20px]">Support Our Mission</h2>
       <div className="grid lg:grid-cols-3 text-center mt-8 md:w-[70%] w-[90%]">
-        {["Digital Hackathons", "Digital Workshops", "MSMEs Stories"].map(
-          (section, index) => (
-            <div key={index} className="w-full">
-              <button
-                className={`hover:bg-[#BFD4FA1A] h-[80px] max-sm:border-t-2 flex justify-center items-center border-b-2 w-full ${
-                  activeSection === section
-                    ? "border-[#BFD4FA] bg-[#BFD4FA1A]"
-                    : "border-[#FFFFFF33] hover:bg-[#BFD4FA1A]"
-                }`}
-                onClick={() =>
-                  setActiveSection(activeSection === section ? "" : section)
-                }
-              >
-                {section}
-                <span className="ml-2">
-                  {activeSection === section ? (
-                    <FaChevronUp className="inline-block lg:hidden" />
-                  ) : (
-                    <FaChevronDown className="inline-block lg:hidden" />
-                  )}
-                </span>
-              </button>
-              {activeSection === section && (
-                <div className="block lg:hidden my-8">
-                  {renderContent(section)}
-                </div>
-              )}
-            </div>
-          )
-        )}
+        {[
+          "Digital Hackathons",
+          "Digital Skill Training",
+          "Digital Vouchers",
+        ].map((section, index) => (
+          <div key={index} className="w-full">
+            <button
+              className={`hover:bg-[#BFD4FA1A] h-[80px] max-sm:border-t-2 flex justify-center items-center border-b-2 w-full ${
+                activeSection === section
+                  ? "border-[#BFD4FA] bg-[#BFD4FA1A]"
+                  : "border-[#FFFFFF33] hover:bg-[#BFD4FA1A]"
+              }`}
+              onClick={() =>
+                setActiveSection(activeSection === section ? "" : section)
+              }
+            >
+              {section}
+              <span className="ml-2">
+                {activeSection === section ? (
+                  <FaChevronUp className="inline-block lg:hidden" />
+                ) : (
+                  <FaChevronDown className="inline-block lg:hidden" />
+                )}
+              </span>
+            </button>
+            {activeSection === section && (
+              <div className="block lg:hidden my-8">
+                {renderContent(section)}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
 
       <div className="hidden lg:block w-full">

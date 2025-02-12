@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion"; // Import Framer Motion
 import Sponsor05 from "../../assets/german-corporation.png";
 import Sponsor04 from "../../assets/eu.png";
 import Sponsor02 from "../../assets/giz.png";
@@ -31,12 +32,12 @@ const SponsorsScroll = () => {
   return (
     <div className="flex flex-col bg-black text-white gap-6">
       <div className="w-[90%] md:w-[70%] mx-auto text-center flex flex-col gap-2 py-4">
-        <h1 className="text-[32px] font-bold">Our Partners</h1>
+        <h1 className="text-[32px] font-bold"> Meet Our Partners </h1>
         <p className="lg:text-[20px] text-[16px] text-[#D1D1D6]">
-          We collaborate with industry leaders, technology innovators, and
-          community-focused organizations to empower MSMEs in Aba. Together, we
-          drive digital transformation, providing resources, tools, and
-          opportunities that enable sustainable growth and success.
+          Discover some of the funders, partners, and collaborators who are
+          supporting our mission at Digital Aba. With their invaluable support,
+          we aim to reach and empower thousands of fashion entrepreneurs and
+          MSMEs in Aba, Nigeria, by 2030.
         </p>
       </div>
       <div className="sponsors w-full bg-gradient-to-b from-[#1542ac54] via-gray-300 to-[#ffff] relative overflow-x-hidden max-sm:overflow-auto">
@@ -86,6 +87,7 @@ const SponsorsScroll = () => {
               </div>
             ))}
         </div>
+
         {/* Keyframes */}
         <style>
           {`
@@ -116,6 +118,33 @@ const SponsorsScroll = () => {
             }
           `}
         </style>
+      </div>
+      <div className="text-center mt-8">
+        {/* Motion button with animations using whileInView */}
+        <motion.a
+          href="https://wa.link/k1urvf"
+          className="bg-[#BFD4FA] text-[#163F9E] rounded-lg px-8 py-4 lg:text-[15px] text-[18px] font-bold shadow-lg max-sm:hidden"
+          initial={{ opacity: 0, scale: 0.6 }} // Initial state: button is invisible and small
+          whileInView={{
+            opacity: 1,
+            scale: 1.1, // Slight scale-up effect
+            y: [30, 0], // Bounce effect when it enters the view (moves from below)
+            transition: {
+              delay: 0.3, // Delay before starting animation
+              duration: 1.2, // Duration of the animation
+              ease: "easeOut",
+            },
+          }}
+          viewport={{ once: false }} // Ensure it animates repeatedly as long as it's in view
+          whileHover={{
+            scale: 1.1,
+            textShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+            transition: { type: "spring", stiffness: 300, damping: 15 },
+          }}
+        >
+          Become a Partner
+        </motion.a>
       </div>
     </div>
   );

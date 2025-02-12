@@ -12,15 +12,16 @@ import HowSection from "./HowSection";
 
 const AboutDA = () => {
   return (
-    <div className="bg-[url('/rectangleBg.png')] bg-cover bg-center h-fit flex flex-col items-center justify-center text-white py-16 relative">
+    <div className="bg-[url('/rectangleBg.png')] bg-cover bg-center h-fit flex flex-col items-center justify-center text-white relative">
       <div className="lg:w-[60%] w-[90%] h-[90%] mt-4">
         <div className="intro text-center">
           <h1 className="md:text-[32px] text-[20px]">About Digital Aba</h1>
           <p className="md:text-[20px] text-[14px] mt-2 text-[#D1D1D6]">
-            We work on projects that move MSMEs in Aba digitally forward.
-            Through tailored digital solutions, expert advice, and access to
-            skilled tech talent, we help businesses embrace technology to
-            improve efficiency, drive growth, and stay competitive.
+            We accelerate the digital growth of Aba MSMEs through our support
+            centers and unique professional pairing program. Each business is
+            matched with a dedicated digital expert who provides hands-on
+            support to transform operations, drive growth, and expand market
+            reach in the digital age.
           </p>
         </div>
         <div className="grid md:grid-cols-2 mt-12 gap-8">
@@ -34,10 +35,10 @@ const AboutDA = () => {
                   Digital Innovation Funds{" "}
                 </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
-                  Every year, we offer an innovation support fund to product
-                  designers, innovators, and software engineers, encouraging
-                  them to develop digital solutions that address real challenges
-                  faced by MSMEs in Aba.
+                  Digital Aba offers innovation funds designed to support
+                  innovators and entrepreneurs in creating digital solutions
+                  that address the real challenges faced by fashion
+                  entrepreneurs and MSMEs in Aba.
                 </p>
                 <a
                   href="https://wa.link/yzcgt7"
@@ -58,13 +59,13 @@ const AboutDA = () => {
               </div>
               <div className="details flex flex-col gap-2">
                 <h2 className="text-[20px] font-bold">
-                  Dedicated Digital Centers{" "}
+                  Digital Support Centers
                 </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
-                  Visit our Digital Center to receive in-person digital support
-                  from our experts. Get hands-on guidance, access to digital
-                  tools, and tailored solutions to help your business thrive in
-                  the digital economy.
+                  The Digital Aba support centers offer in-person digital
+                  support to fashion entrepreneurs in Aba. We provide one-on-one
+                  guidance, access to digital tools, and MSME-tailored solutions
+                  to help the fashion industry thrive in the digital economy.
                 </p>
                 <a
                   href="https://wa.link/3xqy2h"
@@ -87,13 +88,13 @@ const AboutDA = () => {
               </div>
               <div className="details flex flex-col gap-2">
                 <h2 className="text-[20px] font-bold">
-                  Digital Talent Deployment{" "}
+                  Digital MSME Employees
                 </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
-                  We connect MSMEs with skilled digital talents and interns,
-                  deploying them as employees to support your digital
-                  transformation. They help optimize operations, enhance
-                  engagement, and drive long-term growth.
+                  Digital Aba supplies fashion MSMEs in Aba with skilled digital
+                  talent as employees to drive their digital transformation.
+                  They help optimize operations, enhance engagement, and foster
+                  sustainable long-term growth.
                 </p>
                 <a
                   href="https://wa.link/4o1jy5"
@@ -107,15 +108,17 @@ const AboutDA = () => {
               <div>
                 <img src={ToolIcon} alt="ToolsIcon" />
               </div>
+
               <div className="details text-center flex flex-col gap-2">
                 <h2 className="text-[20px] font-bold">
-                  Digital Tools & Vouchers{" "}
+                  Innovation Grants & Vouchers{" "}
                 </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
-                  We partner with top tech companies to offer a digital catalog
-                  for MSMEs in Aba. With our vouchers, businesses can access
-                  essential tools on the catalog for free or at discounted
-                  rates, helping them thrive digitally.
+                  Digital Aba provides entrepreneurs and MSMEs in the fashion
+                  industry with technology vouchers to subsidize the cost of
+                  digital tools and solutions, giving them the opportunity to
+                  adopt digitalization easily without affecting their working
+                  capital.
                 </p>
                 <a
                   href="https://wa.link/9q5477"
