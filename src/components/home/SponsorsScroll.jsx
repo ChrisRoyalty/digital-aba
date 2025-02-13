@@ -5,6 +5,7 @@ import Sponsor04 from "../../assets/eu.png";
 import Sponsor02 from "../../assets/giz.png";
 import Sponsor03 from "../../assets/digitalT.png";
 import Sponsor01 from "../../assets/rad5hub.png"; // Replace with actual sponsor image paths
+import PartnerModal from "./PartnerModal"; // Import modal component
 
 const SponsorsScroll = () => {
   const sponsors = [
@@ -16,6 +17,7 @@ const SponsorsScroll = () => {
   ];
 
   const [loopAnimation, setLoopAnimation] = useState(false);
+  const [isPartnerModalOpen, setIsPartnerModalOpen] = useState(false);
 
   // Calculate total scroll width
   const totalWidth =
@@ -121,9 +123,9 @@ const SponsorsScroll = () => {
       </div>
       <div className="text-center mt-8">
         {/* Motion button with animations using whileInView */}
-        <motion.a
-          href="https://wa.link/k1urvf"
-          className="bg-[#BFD4FA] text-[#163F9E] rounded-lg px-8 py-4 lg:text-[15px] text-[18px] font-bold shadow-lg max-sm:hidden"
+        {/* <motion.button
+          // href="https://wa.link/k1urvf"
+          className="bg-[#BFD4FA] text-[#163F9E] rounded-lg px-8 py-4 lg:text-[15px] text-[18px] font-bold shadow-lg"
           initial={{ opacity: 0, scale: 0.6 }} // Initial state: button is invisible and small
           whileInView={{
             opacity: 1,
@@ -142,9 +144,15 @@ const SponsorsScroll = () => {
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
             transition: { type: "spring", stiffness: 300, damping: 15 },
           }}
+          onClick={() => setIsPartnerModalOpen(true)}
         >
           Become a Partner
-        </motion.a>
+        </motion.button> */}
+        {/* Use the modal */}
+        <PartnerModal
+          isOpen={isPartnerModalOpen}
+          onClose={() => setIsPartnerModalOpen(false)}
+        />
       </div>
     </div>
   );

@@ -17,9 +17,9 @@ const AboutDA = () => {
         <div className="intro text-center">
           <h1 className="md:text-[32px] text-[20px]">About Digital Aba</h1>
           <p className="md:text-[20px] text-[14px] mt-2 text-[#D1D1D6]">
-            We accelerate the digital growth of Aba Fashion MSMEs through our
-            digital grants and credit program. Businesses can use their credits
-            to access dedicated digital tools and experts, receiving hands-on
+            We accelerate the digital growth of Aba MSMEs through our digital
+            grants and credit program. Businesses can use their credits to
+            access dedicated digital tools and experts, receiving hands-on
             support to transform operations, drive growth, and expand market
             reach.
           </p>

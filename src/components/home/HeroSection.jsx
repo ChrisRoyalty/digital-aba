@@ -129,18 +129,18 @@ const HeroSection = () => {
             Digital Grants for Abia{" "}
             <strong className="text-blue-300">MSMEs</strong>
             {/* <br className="hidden lg:block max-sm:block" />
-            Fashion */}
+              Fashion */}
             {/* <span className="text-blue-300 pl-2">
-              <span
-                style={{
-                  whiteSpace: "nowrap",
-                  display: "inline-block", // Ensure the text stays in one line
-                  minWidth: `${textArray[index].length + 1}ch`, // Add a little space to make sure the next text doesn't overflow
-                }}
-              >
-                {currentText}
-              </span>
-            </span> */}
+                <span
+                  style={{
+                    whiteSpace: "nowrap",
+                    display: "inline-block", // Ensure the text stays in one line
+                    minWidth: `${textArray[index].length + 1}ch`, // Add a little space to make sure the next text doesn't overflow
+                  }}
+                >
+                  {currentText}
+                </span>
+              </span> */}
           </h1>
           <p className="lg:mt-4 text-[16px] lg:text-[18px] lg:w-[90%] text-gray-300 lg:text-[#C7C7CC]">
             Digital Aba offers technology credits to Abia MSMEs, providing
@@ -148,17 +148,17 @@ const HeroSection = () => {
             their businesses.
           </p>
 
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex gap-4 max-lg:justify-center max-lg:text-center">
             <a
               href="https://wa.link/uq3khh"
-              className="inline-flex items-center gap-2 bg-[#BFD4FA] text-[#163F9E] px-6 py-3 rounded-[17px] shadow-lg hover:bg-[#BFD4FA]/90 transition"
+              className="inline-flex items-center gap-2 hover:bg-[#BFD4FA] hover:text-[#163F9E] border-[1px] border-[#BFD4FA] px-6 py-3 rounded-[17px] shadow-lg  transition"
             >
               {/* <FaWhatsapp className="text-[24px]" /> */}
               Fund a Grant
             </a>
             <a
               href="https://wa.link/uq3khh"
-              className="inline-flex items-center gap-2 bg-[#BFD4FA] text-[#163F9E] px-6 py-3 rounded-[17px] shadow-lg hover:bg-[#BFD4FA]/90 transition"
+              className="inline-flex items-center gap-2 hover:bg-[#BFD4FA] hover:text-[#163F9E] border-[1px] border-[#BFD4FA] px-6 py-3 rounded-[17px] shadow-lg transition"
             >
               {/* <FaWhatsapp className="text-[24px]" /> */}
               Access Grant
@@ -169,7 +169,7 @@ const HeroSection = () => {
         {/* Scrolling Services Section */}
         <div>
           <h2 className="lg:text-start lg:text-[22px] text-[18px] text-center text-white w-full">
-            Digital Supports for Fashion MSMEs
+            Digital Supports for MSMEs
           </h2>
           <div className="services relative w-full md:overflow-x-hidden overflow-auto  mb-14 flex flex-col gap-4 max-sm:mb-[5vh] max-sm:gap-2 mt-2">
             <div
@@ -386,11 +386,13 @@ const HeroSection = () => {
                 </a>
               )}
             </div>
-            <div className="absolute top-2 right-2">
-              <MdCancelPresentation
-                className="text-gray-500 text-[30px] cursor-pointer hover:text-[31px]"
+            <div className="absolute top-2 right-6">
+              <p
+                className="text-gray-500 text-[20px] cursor-pointer hover:text-[21px]"
                 onClick={closeModal}
-              />
+              >
+                x
+              </p>
             </div>
           </div>
         </div>
@@ -398,15 +400,15 @@ const HeroSection = () => {
 
       <style>
         {`
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
             }
-            100% {
-              transform: translateX(-150%);
-            }
-          }
-        `}
+          `}
       </style>
     </div>
   );
