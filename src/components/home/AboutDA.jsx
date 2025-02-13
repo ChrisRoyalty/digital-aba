@@ -26,22 +26,24 @@ const AboutDA = () => {
         </div>
         <div className="grid md:grid-cols-2 mt-12 gap-8">
           <div className="flex flex-col gap-8 items-center justify-center ">
-            <div className="max-lg:order-2 flex flex-col items-center justify-center px-6 py-12 gap-[30px] rounded-[23px] shadow-lg bg-[#D9D9D91A]">
+            <div className="flex flex-col items-center justify-center px-6 py-12 gap-[30px] rounded-[23px] shadow-lg bg-[#D9D9D91A]">
               <div>
-                <img src={HackathonIcon} alt="HackathonIcon" />
+                <img src={ToolIcon} alt="ToolsIcon" />
               </div>
+
               <div className="details text-center flex flex-col gap-2">
                 <h2 className="text-[20px] font-bold">
-                  Digital Innovation Funds{" "}
+                  Innovation Grants & Vouchers{" "}
                 </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
-                  Digital Aba offers innovation funds designed to support
-                  innovators and entrepreneurs in creating digital solutions
-                  that address the real challenges faced by fashion
-                  entrepreneurs and MSMEs in Aba.
+                  Digital Aba provides entrepreneurs and MSMEs in the fashion
+                  industry with technology vouchers to subsidize the cost of
+                  digital tools and solutions, giving them the opportunity to
+                  adopt digitalization easily without affecting their working
+                  capital.
                 </p>
                 <a
-                  href="https://wa.link/yzcgt7"
+                  href="https://wa.link/9q5477"
                   className="sm:hidden h-[31px] bg-[#BFD4FA] w-[125px] rounded-[14px] shadow-lg flex justify-center items-center text-black mx-auto mt-4 text-[14px]"
                 >
                   Contact Us
@@ -104,24 +106,23 @@ const AboutDA = () => {
                 </a>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center px-6 py-12 gap-[30px] rounded-[23px] shadow-lg bg-[#D9D9D91A]">
-              <div>
-                <img src={ToolIcon} alt="ToolsIcon" />
-              </div>
 
+            <div className="max-lg:order-2 flex flex-col items-center justify-center px-6 py-12 gap-[30px] rounded-[23px] shadow-lg bg-[#D9D9D91A]">
+              <div>
+                <img src={HackathonIcon} alt="HackathonIcon" />
+              </div>
               <div className="details text-center flex flex-col gap-2">
                 <h2 className="text-[20px] font-bold">
-                  Innovation Grants & Vouchers{" "}
+                  Digital Innovation Funds{" "}
                 </h2>
                 <p className="text-[16px] text-[#D1D1D6]">
-                  Digital Aba provides entrepreneurs and MSMEs in the fashion
-                  industry with technology vouchers to subsidize the cost of
-                  digital tools and solutions, giving them the opportunity to
-                  adopt digitalization easily without affecting their working
-                  capital.
+                  Digital Aba offers innovation funds designed to support
+                  innovators and entrepreneurs in creating digital solutions
+                  that address the real challenges faced by fashion
+                  entrepreneurs and MSMEs in Aba.
                 </p>
                 <a
-                  href="https://wa.link/9q5477"
+                  href="https://wa.link/yzcgt7"
                   className="sm:hidden h-[31px] bg-[#BFD4FA] w-[125px] rounded-[14px] shadow-lg flex justify-center items-center text-black mx-auto mt-4 text-[14px]"
                 >
                   Contact Us

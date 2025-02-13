@@ -48,7 +48,7 @@ const Action = () => {
   };
 
   return (
-    <div className="w-full h-fit flex flex-col items-center justify-center text-white pt-16 bg-transparent">
+    <div className="w-full h-fit flex flex-col items-center justify-center text-white bg-transparent">
       <div className="w-[90%] h-fit text-center flex flex-col gap-8">
         <h2 className="lg:text-[32px] text-[20px] font-bold">
           Digital Aba MSME Reports

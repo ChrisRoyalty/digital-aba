@@ -126,10 +126,11 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-10 flex flex-col justify-between bg-center bg-gradient-to-r from-black/75 via-black/30 md:from-black md:via-black/75 to-transparent text-white px-4 lg:px-[5%] sm:pt-[15vh] pt-[12vh] lg:pt-[28vh] max-sm:bg-black/50">
         <div className="w-full max-sm:mt-24 lg:w-[60%] text-center lg:text-left">
           <h1 className="text-[28px] lg:text-[40px] font-bold leading-tight">
-            Digital Grants for Aba
-            <br className="hidden lg:block max-sm:block" />
-            Fashion
-            <span className="text-blue-300 pl-2">
+            Digital Grants for Abia{" "}
+            <strong className="text-blue-300">MSMEs</strong>
+            {/* <br className="hidden lg:block max-sm:block" />
+            Fashion */}
+            {/* <span className="text-blue-300 pl-2">
               <span
                 style={{
                   whiteSpace: "nowrap",
@@ -139,27 +140,35 @@ const HeroSection = () => {
               >
                 {currentText}
               </span>
-            </span>
+            </span> */}
           </h1>
           <p className="lg:mt-4 text-[16px] lg:text-[18px] lg:w-[90%] text-gray-300 lg:text-[#C7C7CC]">
-            Receive technology credits to access expert digital support and
-            powerful tools to help grow your fashion business.
+            Digital Aba offers technology credits to Abia MSMEs, providing
+            access to expert digital support and powerful tools to help grow
+            their businesses.
           </p>
 
-          <div className="mt-6">
+          <div className="mt-8 flex gap-4">
             <a
               href="https://wa.link/uq3khh"
               className="inline-flex items-center gap-2 bg-[#BFD4FA] text-[#163F9E] px-6 py-3 rounded-[17px] shadow-lg hover:bg-[#BFD4FA]/90 transition"
             >
-              <FaWhatsapp className="text-[24px]" />
-              Get Started Today
+              {/* <FaWhatsapp className="text-[24px]" /> */}
+              Fund a Grant
+            </a>
+            <a
+              href="https://wa.link/uq3khh"
+              className="inline-flex items-center gap-2 bg-[#BFD4FA] text-[#163F9E] px-6 py-3 rounded-[17px] shadow-lg hover:bg-[#BFD4FA]/90 transition"
+            >
+              {/* <FaWhatsapp className="text-[24px]" /> */}
+              Access Grant
             </a>
           </div>
         </div>
 
         {/* Scrolling Services Section */}
         <div>
-          <h2 className="lg:text-start lg:text-[25px] text-[20px] text-center text-white w-full">
+          <h2 className="lg:text-start lg:text-[22px] text-[18px] text-center text-white w-full">
             Digital Supports for Fashion MSMEs
           </h2>
           <div className="services relative w-full md:overflow-x-hidden overflow-auto  mb-14 flex flex-col gap-4 max-sm:mb-[5vh] max-sm:gap-2 mt-2">
@@ -379,7 +388,7 @@ const HeroSection = () => {
             </div>
             <div className="absolute top-2 right-2">
               <MdCancelPresentation
-                className="text-[#2e6ad8] text-[30px] cursor-pointer hover:text-[31px]"
+                className="text-gray-500 text-[30px] cursor-pointer hover:text-[31px]"
                 onClick={closeModal}
               />
             </div>
